@@ -9,6 +9,10 @@
   --login-btn-color: var(--hint-of-red);
   --login-btn-bg-hover: var(--hint-of-red);
   --login-btn-color-hover: var(--strikemaster);
+  --register-btn-bg: var(--dusty-gray);
+  --register-btn-color: var(--hint-of-red);
+  --register-btn-bg-hover: var(--hint-of-red);
+  --register-btn-color-hover: var(--strikemaster);
 }
 
 /*--- Color Values ---*/
