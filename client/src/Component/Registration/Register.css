@@ -4,9 +4,8 @@
 .register__container {
     display: flex;
     justify-content: center;
-    max-width: 1000px;
     width: 100%;
-    margin: 20px 0;
+    margin: 125px 0;
 }
 
 .register__form {
