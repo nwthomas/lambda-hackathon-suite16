@@ -4,6 +4,7 @@
 .register__container {
     display: flex;
     justify-content: center;
+    max-width: 1000px;
     width: 100%;
     margin: 20px 0;
 }
