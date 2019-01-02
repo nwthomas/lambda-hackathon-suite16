@@ -1,10 +1,10 @@
-import React from "react";
-import Register from "../Registration/Register";
+import React from 'react';
+import Register from '../Registration/Register';
 
 const Authenticate = App =>
   class extends React.Component {
     state = {
-      loginVerfied: false,
+      loginVerified: false,
       data: [],
       firstname: '',
       lastname: '',
@@ -48,7 +48,7 @@ const Authenticate = App =>
     render() {
       return (
         <React.Fragment>
-          {this.state.loginVerfied ? (
+          {this.state.loginVerified ? (
             <App />
           ) : (
             <Register
