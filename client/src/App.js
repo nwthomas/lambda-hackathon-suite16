@@ -56,24 +56,26 @@ class App extends Component {
     return (
       <BrowserRouter className='App'>
         <div>
-          <NavbarContainer
-            firstname={this.state.firstname}
-            lastname={this.state.lastname}
-            username={this.state.username}
-            password={this.state.password}
-            email={this.state.email}
-            avatar={this.state.avatar}
-            location={this.state.location}
-            creds={this.state.creds}
-            cats={this.state.cats}
-            role={this.state.role}
-            addNewUser={this.addNewUser}
-            handleChange={this.handleChange}
-          />
+          <NavbarContainer />
           <Switch>
             <Route path='/' component={Home} exact />
             <Route path='/login' component={Login} />
-            <Route path='/register' component={Register} />
+            <Route
+              path='/register'
+              component={Register}
+              firstname={this.state.firstname}
+              lastname={this.state.lastname}
+              username={this.state.username}
+              password={this.state.password}
+              email={this.state.email}
+              avatar={this.state.avatar}
+              location={this.state.location}
+              creds={this.state.creds}
+              cats={this.state.cats}
+              role={this.state.role}
+              addNewUser={this.addNewUser}
+              handleChange={this.handleChange}
+            />
           </Switch>
         </div>
       </BrowserRouter>
