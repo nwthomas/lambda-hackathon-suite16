@@ -1,5 +1,6 @@
 import React from "react";
 import NavbarThumbnail from "./NavbarThumbnail";
+import LoginRegistration from "./LoginRegistration";
 import "./Navbar.css";
 import RegisterButton from "./RegisterButton";
 import LoginButton from "./LoginButton";
