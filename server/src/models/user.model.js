@@ -1,10 +1,10 @@
 let mongoose = require("mongoose");
 let userSchema = new mongoose.Schema({
-  firstName: {
+  firstname: {
     type: String,
     required: true
   },
-  lastName: {
+  lastname: {
     type: String,
     required: true
   },
@@ -39,6 +39,15 @@ let userSchema = new mongoose.Schema({
   role: {
     type: String,
     required: true
+  },
+  rating: {
+    type: Number,
+    default: 0
+  },
+  avatar: {
+    type: String,
+    default:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/240px-No_image_available.svg.png"
   }
 });
 
