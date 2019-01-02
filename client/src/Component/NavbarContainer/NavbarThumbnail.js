@@ -9,7 +9,7 @@ const NavbarThumbnail = props => {
         <img src={defaultPicture} alt="User thumbnail" />
       </div>
       <a className="navbar__username__link" href="index.html">
-        Username Placeholder
+        Username
       </a>
     </div>
   );

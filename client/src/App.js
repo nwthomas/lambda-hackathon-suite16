@@ -42,11 +42,11 @@ class App extends Component {
 
   addNewUser = e => {
     e.preventDefault();
-    fetch('http://71.65.239.221:5000/api/users/register', {
-      method: 'POST',
+    fetch("http://71.65.239.221:5000/api/users/register", {
+      method: "POST",
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
+        Accept: "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(this.state)
     })

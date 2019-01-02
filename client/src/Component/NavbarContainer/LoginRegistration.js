@@ -1,16 +1,16 @@
-import React from 'react';
-import './Navbar.css';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 const LoginRegistration = props => {
   return (
-    <div className='login__registration'>
-      <button className='login__button navbar__button'>
-        <NavLink to='/login'>Login</NavLink>
-      </button>
-      <button className='register__button navbar__button'>
-        <NavLink to='/register'>Register</NavLink>
-      </button>
+    <div className="login__registration">
+      <NavLink className="navlink" to="/login">
+        <button className="login__button navbar__button">Login</button>
+      </NavLink>
+      <NavLink className="navlink" to="/register">
+        <button className="register__button navbar__button">Register </button>
+      </NavLink>
     </div>
   );
 };

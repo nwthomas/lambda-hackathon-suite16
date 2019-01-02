@@ -1,6 +1,8 @@
 @import "../../Styles/Variables.css";
 
 .navbar__container {
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -40,6 +42,10 @@
   width: 300px;
 }
 
+.navlink {
+  margin-left: 5%;
+}
+
 .navbar__button {
   height: 40px;
   width: 120px;
@@ -52,6 +58,7 @@
   color: var(--navbar-color);
   font-size: 1.4rem;
   font-family: var(--headers);
+  cursor: pointer;
 }
 
 .navbar__button:hover {
@@ -60,6 +67,37 @@
   background: var(--navbar-btn-bg-hover);
 }
 
-.login__button {
-  margin-right: 5%;
+@media (max-width: 500px) {
+  .navbar__container {
+    height: 60px;
+  }
+
+  .navbar__thumbnail {
+    margin: 15px 0 0;
+    display: flex;
+  }
+
+  .navbar__username__avatar img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar__thumbnail a {
+    font-size: 1.2rem;
+    width: 75px;
+    margin: 10px 0 0 7%;
+  }
+
+  .login__registration {
+    display: flex;
+    justify-content: flex-end;
+    margin: 13px 0 0;
+    width: 68%;
+  }
+
+  .navbar__button {
+    height: 35px;
+    width: 95px;
+  }
 }

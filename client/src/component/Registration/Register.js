@@ -1,113 +1,208 @@
 import React from 'react';
+import './Register.css';
 
 const Register = props => {
   console.log(props.state);
   return (
-    <div>
-      <div className='register__container'>
-        <form onSubmit={props.addNewUser}>
+    <div className='register__container'>
+      <form className='register__form' onSubmit={props.addNewUser}>
+        <h2
+          className='register__form__heading'>
+          Registration Details
+        </h2>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Username
+          </span>
           <input
-            className='register__username'
+            className='register__form__field__text'
             type='text'
             name='username'
-            placeholder='Username'
+            placeholder='Enter a username'
             onChange={props.handleChange}
           />
-          <br />
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            First Name
+          </span>
           <input
-            className='register__firstname'
+            className='register__form__field__text'
             type='text'
             name='firstname'
-            placeholder='First name'
+            placeholder='Enter your first name'
             onChange={props.handleChange}
           />
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Last Name
+          </span>
           <input
-            className='register__lastname'
+            className='register__form__field__text'
             type='text'
             name='lastname'
-            placeholder='Last name'
+            placeholder='Enter your last name'
             onChange={props.handleChange}
           />
-          <br />
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Password
+          </span>
           <input
-            className='register__password'
+            className='register__form__field__text'
             type='password'
             name='password'
-            placeholder='Password'
+            placeholder='Enter a secure password'
             onChange={props.handleChange}
           />
-          <br />
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Email Address
+          </span>
           <input
-            className='register__email'
+            className='register__form__field__text'
             type='email'
             name='email'
-            placeholder='Email'
+            placeholder='Enter your email address'
             onChange={props.handleChange}
           />
-          <br />
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Avatar Photo
+          </span>
           <input
-            className='register__avatar'
+            className='register__form__field__text'
             type='text'
             name='avatar'
-            placeholder='Avatar url'
+            placeholder='Enter an image URL for your avatar photo'
             onChange={props.handleChange}
           />
-          <br />
-          {/* <input
-            className='register__dob'
-            type='date'
-            name='dob'
-            min='1940-01-01'
-            max='2019-01-02'
-            onChange={props.handleChange}
-          /> */}
+        </div>
+        {/* <input
+        className="register__dob"
+          type='date'
+          name='dob'
+          min='1940-01-01'
+          max='2019-01-02'
+          onChange={props.handleChange}
+        /> */}
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Date Of Birth
+          </span>
           <input
-            className='register__dob'
+            className='register__form__field__text'
             type='text'
             name='dob'
+            placeholder='Enter your date of birth'
             onChange={props.handleChange}
           />
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Location
+          </span>
           <input
-            className='register__location'
+            className='register__form__field__text'
             type='text'
             name='location'
-            placeholder='Location'
+            placeholder='Enter your location'
             onChange={props.handleChange}
           />
-          <br />
-
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Credentials
+          </span>
           <input
-            className='register__credentials'
+            className='register__form__field__text'
             type='text'
             name='creds'
-            placeholder='Credentials'
+            placeholder='Enter your credentials'
             onChange={props.handleChange}
           />
-          <br />
-          {/* <select className="register__role-list" name='cats' onChange={props.handleChange}>
-            <option value='taxes'>Taxes</option>
-            <option value='investing'>Investing</option>
-            <option value='estate'>Estate Planning</option>
-            <option value='financial'>Financial Planning</option>
-          </select> */}
+        </div>
+        {/* <select className="register__role-list" name='cats' onChange={props.handleChange}>
+          <option value='taxes'>Taxes</option>
+          <option value='investing'>Investing</option>
+          <option value='estate'>Estate Planning</option>
+          <option value='financial'>Financial Planning</option>
+        </select> */}
 
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Role list
+          </span>
           <input
-            className='register__role-list'
+            className='register__form__field__text'
             type='text'
             name='cats'
+            placeholder='Select from a list of roles'
             onChange={props.handleChange}
           />
-
+        </div>
+        <div
+          className="register__form__field"
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Role input
+          </span>
           <input
-            className='register__role-input'
+            className='register__form__field__text'
             type='text'
             name='role'
-            placeholder='Role'
+            placeholder='Provide a role input'
             onChange={props.handleChange}
           />
-          <button type='submit'>Register</button>
-        </form>
-      </div>
+        </div>
+        <button className="register__form__button" type='submit'>Register</button>
+      </form>
     </div>
   );
 };

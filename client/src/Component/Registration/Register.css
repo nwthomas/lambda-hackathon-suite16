@@ -1,0 +1,62 @@
+/*--- Import --- */
+@import url("../../Styles/Variables.css");
+
+.register__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 125px 0;
+}
+
+.register__form {
+    display: inline-flex;
+    flex-direction: column;
+    width: 50%;
+    box-shadow: 1px 1px 2px 2px var(--silver);
+    padding: 37.5px 7.5%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.register__form__heading {
+    text-align: center;
+    font-family: var(--headers);
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.register__form__field {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.register__form__field__label {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.register__form__field__text {
+    padding: 12.5px;
+}
+
+.register__form__button {
+    width: 50%;
+    background-color: var(--register-btn-bg);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--register-btn-color);
+    cursor: pointer;
+    padding: 20px 0;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+.register__form__button:hover {
+    background-color: var(--register-btn-bg-hover);
+    color: var(--register-btn-color-hover);
+    transition-duration: 250ms;
+    transition-property: all;
+}
