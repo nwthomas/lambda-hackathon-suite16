@@ -1,11 +1,19 @@
 /*--- Color Variables ---*/
 :root {
   --paragraph-color: var(--black);
+  --header-color: var(--black);
   --navbar--bg: var(--dusty-gray);
   --navbar-color: var(--white);
   --navbar-btn-bg: var(--strikemaster);
   --navbar-btn-bg-hover: var(--white);
-  --header-color: var(--black);
+  --login-btn-bg: var(--dusty-gray);
+  --login-btn-color: var(--hint-of-red);
+  --login-btn-bg-hover: var(--hint-of-red);
+  --login-btn-color-hover: var(--strikemaster);
+  --register-btn-bg: var(--dusty-gray);
+  --register-btn-color: var(--hint-of-red);
+  --register-btn-bg-hover: var(--hint-of-red);
+  --register-btn-color-hover: var(--strikemaster);
 }
 
 /*--- Color Values ---*/
@@ -18,6 +26,7 @@
   --hint-of-red: #fbfafa;
   --white: #ffffff;
   --black: #000000;
+  --silver: #c0c0c0;
 }
 
 /*--- Font Variables ---*/

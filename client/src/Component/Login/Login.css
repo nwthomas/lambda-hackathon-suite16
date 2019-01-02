@@ -1,24 +1,24 @@
 /*--- Import --- */
 @import url("../../Styles/Variables.css");
 
-.register__container {
+.login__container {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 125px 0;
 }
 
-.register__form {
+.login__form {
     display: inline-flex;
     flex-direction: column;
-    width: 50%;
+    width: 25%;
     box-shadow: 1px 1px 2px 2px var(--silver);
-    padding: 37.5px 7.5%;
+    padding: 37.5px 3.25%;
     border-radius: 5px;
     text-align: center;
 }
 
-.register__form__heading {
+.login__form__heading {
     text-align: center;
     font-family: var(--headers);
     font-size: 2.8rem;
@@ -26,37 +26,41 @@
     margin-bottom: 30px;
 }
 
-.register__form__field {
+.login__form__field {
     display: flex;
     flex-direction: column;
     margin: 15px 0;
 }
 
-.register__form__field__label {
+.login__form__field__label {
     text-align: left;
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
-.register__form__field__text {
-    padding: 12.5px;
+.login__form__field__text {
+    padding: 10px;
 }
 
-.register__form__button {
-    width: 50%;
-    background-color: var(--register-btn-bg);
+.login__form__button {
+    background-color: var(--login-btn-bg);
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--register-btn-color);
+    color: var(--login-btn-color);
     cursor: pointer;
-    padding: 20px 0;
+    padding: 10px 0;
     border-radius: 5px;
-    margin: 30px auto;
+    margin: 30px 0;
 }
 
-.register__form__button:hover {
-    background-color: var(--register-btn-bg-hover);
-    color: var(--register-btn-color-hover);
+.login__form__button:hover {
+    background-color: var(--login-btn-bg-hover);
+    color: var(--login-btn-color-hover);
     transition-duration: 250ms;
     transition-property: all;
+}
+
+.login__form__register {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
