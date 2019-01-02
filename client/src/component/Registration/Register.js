@@ -55,25 +55,17 @@ const Register = props => {
           />
           <br />
           <input
-            className='register__dob'
-            type='date'
-            name='dob'
-            min='1940-01-01'
-            max='2019-01-02'
-            onChange={props.handleChange}
-<<<<<<< HEAD
-          /> */}
-          <input
             className="register__dob"
-            type="text"
+            type="date"
             name="dob"
-=======
+            min="1940-01-01"
+            max="2019-01-02"
+            onChange={props.handleChange}
           />
           {/* <input
             className='register__dob'
             type='text'
             name='dob'
->>>>>>> 76dfdcb678ce1422fd8b20fb6daac5afce3f03d0
             onChange={props.handleChange}
           /> */}
           <input

@@ -8,16 +8,18 @@
 }
 
 .form__title {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .register__form {
   width: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
 }
 
 .register__form input {
-  width: 30%;
+  width: 40%;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
