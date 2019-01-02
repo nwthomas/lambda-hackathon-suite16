@@ -10,14 +10,14 @@ const Login = props => {
             type='text'
             name='username'
             placeholder='Username'
-            handleChange={props.handleChange}
+            onChange={props.handleChange}
           />
           <input
             className='login__password'
             type='text'
             name='password'
             placeholder='Password'
-            handleChange={props.handleChange}
+            onChange={props.handleChange}
           />
           <button type='submit'>Log in</button>
         </form>
