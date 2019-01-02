@@ -4,6 +4,13 @@ import './App.css';
 import Authenticate from './component/Authentication/Authenticate';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loggedIn: false
+    };
+  }
+
   render() {
     return (
       <div className='App'>
