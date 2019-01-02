@@ -4,7 +4,7 @@ import Register from '../Registration/Register';
 const Authenticate = App =>
   class extends React.Component {
     state = {
-      loginVerfied: true
+      loginVerfied: false
     };
 
     render() {

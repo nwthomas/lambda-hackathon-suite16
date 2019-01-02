@@ -24,22 +24,35 @@ export default class Register extends Component {
       <div>
         <div className='register_container'>
           <form>
-            <input type='text' name='username' />
-            <input type='text' name='firstname' />
-            <input type='text' name='lastname' />
-            <input type='password' name='password' />
-            <input type='email' name='email' />
-            <input type='text' name='avatar' />
-            <input type='text' name='dob' />
-            <input type='text' name='location' />
-            <input type='text' name='creds' />
-            <input type='text' name='cats' />
-            <input type='text' name='role' />
-          </form>
-        </div>
+            <input type='text' name='username' placeholder='Username' />
+            <br />
+            <input type='text' name='firstname' placeholder='First name' />
+            <input type='text' name='lastname' placeholder='Last name' />
+            <br />
+            <input type='password' name='password' placeholder='Password' />
+            <br />
+            <input type='email' name='email' placeholder='Email' />
+            <br />
+            <input type='text' name='avatar' placeholder='Avatar url' />
+            <br />
+            <input type='date' name='dob' min='1940-01-01' max='2019-01-02' />
+            <input type='text' name='location' placeholder='Location' />
+            <br />
 
-        <div>
-          <button>Login for now</button>
+            <input type='text' name='creds' placeholder='Credentials' />
+            <br />
+            <select name='cats'>
+              <option value='taxes'>Taxes</option>
+              <option value='investing'>Investing</option>
+              <option value='estate'>Estate Planning</option>
+              <option value='financial'>Financial Planning</option>
+            </select>
+
+            <input type='text' name='role' placeholder='Role' />
+            <div>
+              <button>Register</button>
+            </div>
+          </form>
         </div>
       </div>
     );
