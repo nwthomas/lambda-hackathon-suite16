@@ -4,10 +4,6 @@ import "./App.css";
 import Authenticate from "./Component/Authentication/Authenticate";
 
 class App extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div className="App">
