@@ -150,6 +150,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  font-family: var(--headers);
+  text-decoration: none;
+}
+
 p {
   font-family: var(--paragraph-font-family);
   font-size: 1.6rem;

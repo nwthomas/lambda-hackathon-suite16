@@ -1,6 +1,10 @@
 /*--- Color Variables ---*/
 :root {
   --paragraph-color: var(--black);
+  --navbar--bg: var(--dusty-gray);
+  --navbar-color: var(--white);
+  --navbar-btn-bg: var(--strikemaster);
+  --navbar-btn-bg-hover: var(--white);
 }
 
 /*--- Color Values ---*/
