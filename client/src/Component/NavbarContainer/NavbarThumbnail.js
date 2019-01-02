@@ -1,7 +1,6 @@
 import React from "react";
 import defaultPicture from "../../Images/cat__default__profile.jpg";
 import "./Navbar.css";
-import NavbarProfileName from "./NavbarProfileName";
 
 const NavbarThumbnail = props => {
   return (
@@ -10,9 +9,8 @@ const NavbarThumbnail = props => {
         <img src={defaultPicture} alt="User thumbnail" />
       </div>
       <a className="navbar__username__link" href="index.html">
-        Username Placeholder
+        Username
       </a>
-      <NavbarProfileName name="User Name" />
     </div>
   );
 };

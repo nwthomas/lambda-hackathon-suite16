@@ -1,84 +1,103 @@
 @import "../../Styles/Variables.css";
 
 .navbar__container {
+  position: absolute;
+  top: 0;
   display: flex;
-  height: 80px;
-  background: #d7cad1;
-  margin: 0 auto;
-  max-width: 100%;
   justify-content: space-between;
+  width: 100%;
+  background: var(--navbar--bg);
+  height: 80px;
+  padding: 0 2%;
+  -webkit-box-shadow: -1px 6px 5px -2px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: -1px 6px 5px -2px rgba(0, 0, 0, 0.12);
+  box-shadow: -1px 6px 5px -2px rgba(0, 0, 0, 0.12);
 }
-.navbar__profile__name {
-  font-size: 1.7rem;
-  color: #fbfafa;
-  font-weight: 700;
-  align-self: center;
-}
-.navbar__username__avatar {
-  border-radius: 50%;
-  height: 75%;
-}
+
 .navbar__thumbnail {
-  margin-left: 20px;
+  margin: 15px 0 0;
+  display: flex;
 }
 
-.navbar__btn__container {
-  align-self: center;
-}
-.register__btn {
+.navbar__username__avatar img {
+  width: 50px;
   height: 50px;
-  width: 120px;
-  color: #fbfafa;
-  background: #f7d736;
-  font-size: 1.5rem;
-  border: 2.5px solid #fbfafa;
-  font-weight: 700;
-  border-radius: 10%;
-  align-self: center;
-
-  margin-right: 30px;
+  border-radius: 50%;
 }
 
-.login__btn {
-  height: 50px;
+.navbar__thumbnail a {
+  font-weight: 800;
+  display: inline-block;
+  font-size: 1.4rem;
+  width: 200px;
+  color: var(--navbar-color);
+  margin: 18px 5% 0;
+  text-decoration: none;
+}
+
+.login__registration {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 0;
+  width: 300px;
+}
+
+.navlink {
+  margin-left: 5%;
+}
+
+.navbar__button {
+  height: 40px;
   width: 120px;
-  color: #fbfafa;
-  background: #8e697b;
-  font-size: 1.5rem;
-  border: 2.5px solid #fbfafa;
-  font-weight: 700;
-  border-radius: 10%;
-  align-self: center;
-  margin-right: 20px;
+  border: none;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font-size: 1.4rem;
+  background: var(--navbar-btn-bg);
+  color: var(--navbar-color);
+  font-size: 1.4rem;
+  font-family: var(--headers);
+  cursor: pointer;
+}
+
+.navbar__button:hover {
+  border: 2px solid var(--navbar-btn-bg);
+  color: var(--navbar-btn-bg);
+  background: var(--navbar-btn-bg-hover);
 }
 
 @media (max-width: 500px) {
   .navbar__container {
     height: 60px;
-    justify-content: space-evenly;
   }
-  .navbar__username__avatar {
-    border-radius: 50%;
-    height: 70%;
-  }
-  .login__btn,
-  .register__btn {
-    height: 30px;
-    width: 70px;
-    margin: 0;
-    font-size: 1rem;
-  }
-  .login__btn {
-    margin-left: 20px;
-  }
-  .login .navbar__thumbnail {
-    margin-left: 0px;
-  }
-  .navbar__btn__container {
+
+  .navbar__thumbnail {
+    margin: 15px 0 0;
     display: flex;
-    justify-content: space-evenly;
   }
-  .navbar__profile__name {
-    font-size: 1.5rem;
+
+  .navbar__username__avatar img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar__thumbnail a {
+    font-size: 1.2rem;
+    width: 75px;
+    margin: 10px 0 0 7%;
+  }
+
+  .login__registration {
+    display: flex;
+    justify-content: flex-end;
+    margin: 13px 0 0;
+    width: 68%;
+  }
+
+  .navbar__button {
+    height: 35px;
+    width: 95px;
   }
 }
