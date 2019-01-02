@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import './Login.css';
 
 const Login = props => {
@@ -8,7 +9,7 @@ const Login = props => {
         <form className='login__form' onSubmit={props.logInUser}>
           <h2
             className="login__form__heading">
-            Log In
+            Member Login
           </h2>
           <div
             className='login__form__field'
@@ -45,8 +46,13 @@ const Login = props => {
           <button 
             className='login__form__button'
             type='submit'>
-            Log in
+            Log In
           </button>
+          <div
+            className="login__form__register"
+          >
+          Not registered yet? <NavLink to="/register" className="login__form__register__link">Create an account</NavLink>
+          </div>
         </form>
       </div>
     </div>

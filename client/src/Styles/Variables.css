@@ -5,6 +5,10 @@
   --navbar-color: var(--white);
   --navbar-btn-bg: var(--strikemaster);
   --navbar-btn-bg-hover: var(--white);
+  --login-btn-bg: var(--dusty-gray);
+  --login-btn-color: var(--hint-of-red);
+  --login-btn-bg-hover: var(--hint-of-red);
+  --login-btn-color-hover: var(--strikemaster);
 }
 
 /*--- Color Values ---*/
@@ -17,6 +21,7 @@
   --hint-of-red: #fbfafa;
   --white: #ffffff;
   --black: #000000;
+  --silver: #c0c0c0;
 }
 
 /*--- Font Variables ---*/
