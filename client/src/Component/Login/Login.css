@@ -1,0 +1,56 @@
+/*--- Import --- */
+@import url("../../Styles/Variables.css");
+
+.login__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.login__form {
+    display: inline-flex;
+    flex-direction: column;
+    width: 25%;
+    box-shadow: 1px 1px 2px 2px silver;
+    padding: 37.5px 3.25%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login__form__heading {
+    text-align: center;
+    font-family: var(--headers);
+    font-size: 3rem;
+    font-weight: bold;
+    /* text-decoration: underline;
+    text-decoration-skip-ink: none; */
+    letter-spacing: 2px;
+    margin-bottom: 37.5px;
+}
+
+.login__form__field {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.login__form__field__label {
+    text-align: left;
+    font-size: 2rem;
+    /* font-weight: bold; */
+    margin-bottom: 15px;
+}
+
+.login__form__field__text {
+    padding: 10px;
+}
+
+.login__form__button {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 50px 0 20px;
+}
