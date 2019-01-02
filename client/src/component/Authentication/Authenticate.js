@@ -49,7 +49,7 @@ const Authenticate = App =>
       return (
         <React.Fragment>
           {this.state.loginVerfied ? (
-            <App logout={this.logout} />
+            <App />
           ) : (
             <Register
               firstname={this.state.firstname}
