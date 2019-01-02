@@ -1,5 +1,7 @@
 import React from "react";
 import defaultPicture from "../../Images/cat__default__profile.jpg";
+import "./Navbar.css";
+import NavbarProfileName from "./NavbarProfileName";
 
 const NavbarThumbnail = props => {
   return (
@@ -12,6 +14,7 @@ const NavbarThumbnail = props => {
       <a className="navbar__username__link" href="index.html">
         {props.username}
       </a>
+      <NavbarProfileName name="User Name" />
     </div>
   );
 };
