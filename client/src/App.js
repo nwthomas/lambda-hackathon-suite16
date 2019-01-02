@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import NavbarContainer from "./Component/NavbarContainer/NavbarContainer";
 import "./App.css";
-// import Authenticate from './component/Authentication/Authenticate';
+import Authenticate from "./Component/Authentication/Authenticate";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      loggedIn: false
-    };
   }
 
   render() {
@@ -20,5 +17,4 @@ class App extends Component {
   }
 }
 
-export default App;
-// export default Authenticate(App);
+export default Authenticate(App);

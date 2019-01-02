@@ -1,5 +1,5 @@
-import React from 'react';
-import Register from '../Registration/Register';
+import React from "react";
+import Register from "../Registration/Register";
 
 const Authenticate = App =>
   class extends React.Component {
