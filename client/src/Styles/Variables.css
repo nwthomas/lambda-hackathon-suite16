@@ -1,4 +1,7 @@
 /*--- Color Variables ---*/
+:root {
+  --paragraph-color: var(--black);
+}
 
 /*--- Color Values ---*/
 /*--- colors pulled from http://chir.ag/projects/name-that-color/#6195ED ---*/
@@ -9,6 +12,15 @@
   --lola: #d7cad1;
   --hint-of-red: #fbfafa;
   --white: #ffffff;
+  --black: #000000;
 }
 
 /*--- Font Variables ---*/
+:root {
+  --paragraph-font-family: "Roboto", sans-serif;
+  --headers: "Roboto", sans-serif;
+}
+
+/*
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+*/

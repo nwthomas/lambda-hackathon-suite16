@@ -138,6 +138,7 @@ table {
 
 html {
   font-size: 62.5%;
+  background: var(--saffron);
 }
 
 body {
@@ -148,6 +149,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-family: var(--paragraph-font-family);
+  font-size: 1.6rem;
+  color: var(--paragraph-color);
 }
 
 code {
