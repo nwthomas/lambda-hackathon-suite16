@@ -1,54 +1,56 @@
-import React from 'react';
+import React from "react";
+import "./Register.css";
 
 const Register = props => {
   return (
     <div>
-      <div className='register__container'>
-        <form onSubmit={props.addNewUser}>
+      <div className="register__container">
+        <h1 className="form__title">Register</h1>
+        <form className="register__form" onSubmit={props.addNewUser}>
           <input
-            className='register__username'
-            type='text'
-            name='username'
-            placeholder='Username'
+            className="register__username"
+            type="text"
+            name="username"
+            placeholder="Username"
             onChange={props.handleChange}
           />
           <br />
           <input
-            className='register__firstname'
-            type='text'
-            name='firstname'
-            placeholder='First name'
+            className="register__firstname"
+            type="text"
+            name="firstname"
+            placeholder="First name"
             onChange={props.handleChange}
           />
           <input
-            className='register__lastname'
-            type='text'
-            name='lastname'
-            placeholder='Last name'
-            onChange={props.handleChange}
-          />
-          <br />
-          <input
-            className='register__password'
-            type='password'
-            name='password'
-            placeholder='Password'
+            className="register__lastname"
+            type="text"
+            name="lastname"
+            placeholder="Last name"
             onChange={props.handleChange}
           />
           <br />
           <input
-            className='register__email'
-            type='email'
-            name='email'
-            placeholder='Email'
+            className="register__password"
+            type="password"
+            name="password"
+            placeholder="Password"
             onChange={props.handleChange}
           />
           <br />
           <input
-            className='register__avatar'
-            type='text'
-            name='avatar'
-            placeholder='Avatar url'
+            className="register__email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={props.handleChange}
+          />
+          <br />
+          <input
+            className="register__avatar"
+            type="text"
+            name="avatar"
+            placeholder="Avatar url"
             onChange={props.handleChange}
           />
           <br />
@@ -61,25 +63,25 @@ const Register = props => {
             onChange={props.handleChange}
           /> */}
           <input
-            className='register__dob'
-            type='text'
-            name='dob'
+            className="register__dob"
+            type="text"
+            name="dob"
             onChange={props.handleChange}
           />
           <input
-            className='register__location'
-            type='text'
-            name='location'
-            placeholder='Location'
+            className="register__location"
+            type="text"
+            name="location"
+            placeholder="Location"
             onChange={props.handleChange}
           />
           <br />
 
           <input
-            className='register__credentials'
-            type='text'
-            name='creds'
-            placeholder='Credentials'
+            className="register__credentials"
+            type="text"
+            name="creds"
+            placeholder="Credentials"
             onChange={props.handleChange}
           />
           <br />
@@ -91,20 +93,20 @@ const Register = props => {
           </select> */}
 
           <input
-            className='register__role-list'
-            type='text'
-            name='cats'
+            className="register__role-list"
+            type="text"
+            name="cats"
             onChange={props.handleChange}
           />
 
           <input
-            className='register__role-input'
-            type='text'
-            name='role'
-            placeholder='Role'
+            className="register__role-input"
+            type="text"
+            name="role"
+            placeholder="Role"
             onChange={props.handleChange}
           />
-          <button type='submit'>Register</button>
+          <button type="submit">Register</button>
         </form>
       </div>
     </div>

@@ -1,6 +1,8 @@
 @import "../../Styles/Variables.css";
 
 .navbar__container {
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;

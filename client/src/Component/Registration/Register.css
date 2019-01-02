@@ -1,0 +1,23 @@
+@import "../../Styles/Variables.css";
+
+.register__container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px 5%;
+  margin: 100px auto 0;
+}
+
+.form__title {
+  margin-bottom: 10px;
+}
+
+.register__form {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.register__form input {
+  width: 30%;
+}
