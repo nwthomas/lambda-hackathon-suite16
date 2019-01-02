@@ -1,1 +1,84 @@
 @import "../../Styles/Variables.css";
+
+.navbar__container {
+  display: flex;
+  height: 80px;
+  background: #d7cad1;
+  margin: 0 auto;
+  max-width: 100%;
+  justify-content: space-between;
+}
+.navbar__profile__name {
+  font-size: 1.7rem;
+  color: #fbfafa;
+  font-weight: 700;
+  align-self: center;
+}
+.navbar__username__avatar {
+  border-radius: 50%;
+  height: 75%;
+}
+.navbar__thumbnail {
+  margin-left: 20px;
+}
+
+.navbar__btn__container {
+  align-self: center;
+}
+.register__btn {
+  height: 50px;
+  width: 120px;
+  color: #fbfafa;
+  background: #f7d736;
+  font-size: 1.5rem;
+  border: 2.5px solid #fbfafa;
+  font-weight: 700;
+  border-radius: 10%;
+  align-self: center;
+
+  margin-right: 30px;
+}
+
+.login__btn {
+  height: 50px;
+  width: 120px;
+  color: #fbfafa;
+  background: #8e697b;
+  font-size: 1.5rem;
+  border: 2.5px solid #fbfafa;
+  font-weight: 700;
+  border-radius: 10%;
+  align-self: center;
+  margin-right: 20px;
+}
+
+@media (max-width: 500px) {
+  .navbar__container {
+    height: 60px;
+    justify-content: space-evenly;
+  }
+  .navbar__username__avatar {
+    border-radius: 50%;
+    height: 70%;
+  }
+  .login__btn,
+  .register__btn {
+    height: 30px;
+    width: 70px;
+    margin: 0;
+    font-size: 1rem;
+  }
+  .login__btn {
+    margin-left: 20px;
+  }
+  .login .navbar__thumbnail {
+    margin-left: 0px;
+  }
+  .navbar__btn__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .navbar__profile__name {
+    font-size: 1.5rem;
+  }
+}
