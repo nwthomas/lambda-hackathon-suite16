@@ -50,9 +50,10 @@ export default class Register extends Component {
   render() {
     return (
       <div>
-        <div className='register_container'>
+        <div className='register__container'>
           <form onSubmit={this.addNewUser}>
             <input
+              className='register__username'
               type='text'
               name='username'
               placeholder='Username'
@@ -60,12 +61,14 @@ export default class Register extends Component {
             />
             <br />
             <input
+              className='register__firstname'
               type='text'
               name='firstname'
               placeholder='First name'
               onChange={this.handleChange}
             />
             <input
+              className='register__lastname'
               type='text'
               name='lastname'
               placeholder='Last name'
@@ -73,6 +76,7 @@ export default class Register extends Component {
             />
             <br />
             <input
+              className='register__password'
               type='password'
               name='password'
               placeholder='Password'
@@ -80,6 +84,7 @@ export default class Register extends Component {
             />
             <br />
             <input
+              className='register__email'
               type='email'
               name='email'
               placeholder='Email'
@@ -87,6 +92,7 @@ export default class Register extends Component {
             />
             <br />
             <input
+              className='register__avatar'
               type='text'
               name='avatar'
               placeholder='Avatar url'
@@ -94,14 +100,21 @@ export default class Register extends Component {
             />
             <br />
             {/* <input
+            className="register__dob"
               type='date'
               name='dob'
               min='1940-01-01'
               max='2019-01-02'
               onChange={this.handleChange}
             /> */}
-            <input type='text' name='dob' onChange={this.handleChange} />
             <input
+              className='register__dob'
+              type='text'
+              name='dob'
+              onChange={this.handleChange}
+            />
+            <input
+              className='register__location'
               type='text'
               name='location'
               placeholder='Location'
@@ -110,22 +123,29 @@ export default class Register extends Component {
             <br />
 
             <input
+              className='register__credentials'
               type='text'
               name='creds'
               placeholder='Credentials'
               onChange={this.handleChange}
             />
             <br />
-            {/* <select name='cats' onChange={this.handleChange}>
+            {/* <select className="register__role-list" name='cats' onChange={this.handleChange}>
               <option value='taxes'>Taxes</option>
               <option value='investing'>Investing</option>
               <option value='estate'>Estate Planning</option>
               <option value='financial'>Financial Planning</option>
             </select> */}
 
-            <input type='text' name='cats' onChange={this.handleChange} />
+            <input
+              className='register__role-list'
+              type='text'
+              name='cats'
+              onChange={this.handleChange}
+            />
 
             <input
+              className='register__role-input'
               type='text'
               name='role'
               placeholder='Role'
