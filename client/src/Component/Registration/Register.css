@@ -34,6 +34,10 @@
     margin: 15px 0;
 }
 
+.register__form__field--hidden {
+    display: none;
+}
+
 .register__form__field__label {
     text-align: left;
     font-size: 1.8rem;

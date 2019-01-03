@@ -29,7 +29,8 @@ class App extends Component {
       role: "",
       dob: "",
       loggedIn: false,
-      currentUserName: ""
+      currentUserName: "",
+      selectedRole: ""
     };
   }
 
@@ -118,6 +119,12 @@ class App extends Component {
     });
   };
 
+  onRoleChange = e => {
+    this.setState({
+      selectedRole: e.target.value
+    })
+  };
+
   render() {
     return (
       <BrowserRouter className="App">
@@ -162,6 +169,8 @@ class App extends Component {
                   state={this.state}
                   addNewUser={this.addNewUser}
                   handleChange={this.handleChange}
+                  onRoleChange={this.onRoleChange}
+                  selectedRole={this.state.selectedRole}
                 />
               )}
             />

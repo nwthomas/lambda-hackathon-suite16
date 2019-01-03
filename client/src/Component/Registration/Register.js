@@ -2,7 +2,6 @@ import React from 'react';
 import './Register.css';
 
 const Register = props => {
-  console.log(props.state);
   return (
     <div className='register__container'>
       <form className='register__form' onSubmit={props.addNewUser}>
@@ -182,9 +181,27 @@ const Register = props => {
           <select 
             className="register__form__field__text" 
             name='cats' 
+            onChange={e => props.onRoleChange(e)}
+          >
+            <option disabled selected value="">Select a role</option>
+            <option value="advisee">I want to be an advisee</option>
+            <option value="advisor">I want to be an advisor</option>
+          </select>
+        </div>
+        <div
+          className={props.selectedRole === "advisor" ? "register__form__field" : "register__form__field--hidden"}
+        >
+          <span
+            className='register__form__field__label'
+          >
+            Advisor specialty
+          </span>
+          <select 
+            className="register__form__field__text" 
+            name='cats' 
             onChange={props.handleChange}
           >
-            <option disabled selected value="">Select from a list of roles</option>
+            <option disabled selected value="">Select a finance topic that you specialize in</option>
             <option value='taxes'>Taxes</option>
             <option value='investing'>Investing</option>
             <option value='estate'>Estate Planning</option>
