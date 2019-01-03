@@ -42,7 +42,7 @@ const Login = props => {
             handleChange={props.handleChange}
           />
         </div>
-        <button 
+        <button
           className='login__form__button'
           type='submit'>
           Log In
@@ -50,7 +50,7 @@ const Login = props => {
         <div
           className='login__form__register'
         >
-        Not registered yet? <NavLink to='/register' className='login__form__register__link'>Create an account</NavLink>
+          Not registered yet? <NavLink to='/register' className='login__form__register__link'>Create an account</NavLink>
         </div>
       </form>
     </div>

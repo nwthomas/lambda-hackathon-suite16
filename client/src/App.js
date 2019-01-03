@@ -1,29 +1,44 @@
-import React, { Component } from "react";
-import NavbarContainer from "./Component/NavbarContainer/NavbarContainer";
-import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./Component/Home/Home";
-import Login from "./Component/Login/Login";
-import Register from "./Component/Registration/Register";
+import React, { Component } from 'react';
+import NavbarContainer from './Component/NavbarContainer/NavbarContainer';
+import './App.css';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import Home from './Component/Home/Home';
+import Login from './Component/Login/Login';
+import Register from './Component/Registration/Register';
+import Dashboard from './Component/Dashboard/Dashboard';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      loginVerified: false,
-      data: [],
-      firstname: "",
-      lastname: "",
-      username: "",
-      password: "",
-      email: "",
-      avatar: "",
-      location: "",
-      creds: "",
-      cats: "",
-      role: ""
+      "loginVerified": false,
+      "data": [],
+      "loggedInUser": [],
+      "firstname": '',
+      "lastname": '',
+      "username": '',
+      "password": '',
+      "email": '',
+      "avatar": '',
+      "location": '',
+      "creds": '',
+      "cats": '',
+      "role": '',
+      loggedIn: false
     };
   }
+
+  componentDidMount() {
+    if (this.state.loggedInUser.length > 0) {
+      return this.setState({
+        loggedIn: true
+      })
+    } else {
+      return;
+    }
+  }
+
+
 
   addNewUser = e => {
     e.preventDefault();
@@ -37,13 +52,26 @@ class App extends Component {
     })
       .then(res => res.json())
       .then(data =>
-        this.setState(
-          {
-            data
-          },
-          () => console.log(this.state.data)
-        )
+        this.setState({
+          data
+        })
       );
+  };
+
+  logInUser = e => {
+    e.preventDefault();
+    fetch('http://71.65.239.221:5000/api/users/login', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
+    })
+      .then(res => res.json())
+      .then(loggedInUser => this.setState({
+        loggedInUser
+      }));
   };
 
   handleChange = e => {
@@ -53,29 +81,65 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.loggedInUser)
     return (
-      <BrowserRouter
-        className="App"
-        firstname={this.state.firstname}
-        lastname={this.state.lastname}
-        username={this.state.username}
-        password={this.state.password}
-        email={this.state.email}
-        avatar={this.state.avatar}
-        location={this.state.location}
-        creds={this.state.creds}
-        cats={this.state.cats}
-        role={this.state.role}
-        addNewUser={this.addNewUser}
-        handleChange={this.handleChange}
-      >
+      <BrowserRouter className='App'>
         <div>
-          <NavbarContainer />
+          <NavbarContainer
+            firstname={this.state.firstname}
+            lastname={this.state.lastname}
+            username={this.state.username}
+            password={this.state.password}
+            email={this.state.email}
+            avatar={this.state.avatar}
+            location={this.state.location}
+            creds={this.state.creds}
+            cats={this.state.cats}
+            role={this.state.role}
+            addNewUser={this.addNewUser}
+            handleChange={this.handleChange}
+          />
           <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
+            <Route path='/' render={() => (
+              this.loggedIn ? (
+                <Redirect to="/dashboard" />
+              ) : (
+                  <Home />
+                )
+            )} exact />
+            <Route
+              path='/login'
+              render={props => (
+                <Login
+                  {...props}
+                  state={this.state}
+                  handleChange={this.handleChange}
+                  logInUser={this.logInUser}
+                />
+              )}
+            />
+            <Route
+              path='/register'
+              render={props => (
+                <Register
+                  {...props}
+                  state={this.state}
+                  addNewUser={this.addNewUser}
+                  handleChange={this.handleChange}
+                />
+              )}
+            />
+            {/* <Route path='/dashboard'
+
+              render={props => (
+                this.isAuthenticated ? (<Dashboard
+                  {...props}
+                  state={this.state}
+                />) : alert('user not found')
+
+              )} /> */}
           </Switch>
+
         </div>
       </BrowserRouter>
     );
