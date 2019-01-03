@@ -1,30 +1,30 @@
-import React, { Component } from "react";
-import NavbarContainer from "./Component/NavbarContainer/NavbarContainer";
-import "./App.css";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Home from "./Component/Home/Home";
-import Login from "./Component/Login/Login";
-import Register from "./Component/Registration/Register";
-import Dashboard from "./Component/Dashboard/Dashboard";
+import React, { Component } from 'react';
+import NavbarContainer from './Component/NavbarContainer/NavbarContainer';
+import './App.css';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import Home from './Component/Home/Home';
+import Login from './Component/Login/Login';
+import Register from './Component/Registration/Register';
+import Dashboard from './Component/Dashboard/Dashboard';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      loginVerified: false,
-      data: [],
-      loggedInUser: [],
-      firstname: "",
-      lastname: "",
-      username: "",
-      password: "",
-      email: "",
-      avatar: "",
-      location: "",
-      creds: "",
-      cats: "",
-      role: "",
-      loggedIn: false
+      "loginVerified": false,
+      "data": [],
+      "loggedInUser": [],
+      "firstname": '',
+      "lastname": '',
+      "username": '',
+      "password": '',
+      "email": '',
+      "avatar": '',
+      "location": '',
+      "creds": '',
+      "cats": '',
+      "role": '',
+      "loggedIn": false
     };
   }
 
@@ -56,20 +56,20 @@ class App extends Component {
 
   logInUser = e => {
     e.preventDefault();
-    fetch("http://71.65.239.221:5000/api/users/login", {
-      method: "POST",
+    fetch('http://71.65.239.221:5000/api/users/login', {
+      method: 'POST',
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state)
     })
       .then(res => res.json())
       .then(loggedInUser => {
-        localStorage.setItem("token", loggedInUser.token);
+        localStorage.setItem('token', loggedInUser.token)
         this.setState({
           loggedInUser
-        });
+        })
       });
   };
 
@@ -80,9 +80,9 @@ class App extends Component {
   };
 
   render() {
-    console.log(window.localStorage);
+    console.log(window.localStorage)
     return (
-      <BrowserRouter className="App">
+      <BrowserRouter className='App'>
         <div>
           <NavbarContainer
             firstname={this.state.firstname}
@@ -90,13 +90,15 @@ class App extends Component {
             username={this.state.username}
           />
           <Switch>
+            <Route path='/' render={() => (
+              this.loggedIn ? (
+                <Dashboard />
+              ) : (
+                  <Home />
+                )
+            )} exact />
             <Route
-              path="/"
-              render={() => (this.loggedIn ? <Dashboard /> : <Home />)}
-              exact
-            />
-            <Route
-              path="/login"
+              path='/login'
               render={props => (
                 <Login
                   {...props}
@@ -107,7 +109,7 @@ class App extends Component {
               )}
             />
             <Route
-              path="/register"
+              path='/register'
               render={props => (
                 <Register
                   {...props}
