@@ -49,9 +49,18 @@ class App extends Component {
     })
       .then(res => res.json())
       .then(data =>
-        this.setState({
-          data
-        })
+        this.setState(
+          {
+            data
+          },
+          () => {
+            if (this.state.data) {
+              window.location.replace("/login");
+            } else {
+              alert("ERROR ACCURED");
+            }
+          }
+        )
       );
   };
 
