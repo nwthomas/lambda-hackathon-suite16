@@ -19,7 +19,7 @@
   --register-btn-bg-hover: var(--white);
   --register-btn-color-hover: var(--strikemaster);
   --register-btn-border-hover: var(--strikemaster);
-  --home-headline-color: var(--strikemaster);
+  --home-headline-color: var(--white);
 }
 
 /*--- Color Values ---*/
