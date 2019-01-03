@@ -14,7 +14,7 @@ const Login = props => {
             type="text"
             name="username"
             placeholder="Enter your username"
-            handleChange={props.handleChange}
+            onChange={props.handleChange}
           />
         </div>
         <div className="login__form__field">
@@ -24,7 +24,7 @@ const Login = props => {
             type="password"
             name="password"
             placeholder="Enter your password"
-            handleChange={props.handleChange}
+            onChange={props.handleChange}
           />
         </div>
         <button className="login__form__button" type="submit">
