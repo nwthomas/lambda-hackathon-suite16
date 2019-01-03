@@ -6,9 +6,7 @@ const Dashboard = props => {
   return (
     <div>
       <Profile _id={props._id} profiles={props.profiles} />
-      <VideoChat
-        className={props.loggedinUser ? "video--display" : "display--hidden"}
-      />
+      <VideoChat />
     </div>
   );
 };
