@@ -12,3 +12,5 @@ const Dashboard = props => {
 };
 
 export default Dashboard;
+
+// className={props.loggedinUser ? "video--display" : "display--hidden"}
