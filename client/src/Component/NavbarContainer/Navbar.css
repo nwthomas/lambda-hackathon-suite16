@@ -58,7 +58,7 @@
   background: var(--navbar-btn-bg);
   color: var(--navbar-btn-color);
   font-size: 1.4rem;
-  font-family: var(--headers);
+  font-family: var(--paragraph-font-family);
   cursor: pointer;
 }
 
