@@ -89,6 +89,7 @@ class App extends Component {
         if (loggedInUser.user) {
           localStorage.setItem("loginId", loggedInUser.user._id);
           localStorage.setItem("loggedInUser", loggedInUser.user.firstname);
+          localStorage.setItem("avatar", loggedInUser.user.avatar);
         } else {
           localStorage.clear();
           return alert("Login Failed");
@@ -133,6 +134,7 @@ class App extends Component {
           <NavbarContainer
             loggedInUser={localStorage.loggedInUser || null}
             logOutUser={this.logOutUser}
+            userAvatar={localStorage.avatar}
           />
           <Switch>
             <Route
