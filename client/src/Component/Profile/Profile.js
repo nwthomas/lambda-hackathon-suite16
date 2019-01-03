@@ -97,10 +97,10 @@ const Profile = props => {
           </div>
           <div className="profile__data__right__field">
             <span className="profile__data__right__field__label">
-              Specialty role:{" "}
+              User type:
             </span>
             <span className="profile__data__right__field__value">
-              {target.role}
+              {target.role === "advisee" ? "Advisee" : `Advisor (${target.specialty || "specialty pending"})`}
             </span>
           </div>
         </div>
