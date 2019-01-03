@@ -57,6 +57,7 @@
 .register__form__button:hover {
     background-color: var(--register-btn-bg-hover);
     color: var(--register-btn-color-hover);
+    border: 2px solid var(--register-btn-border-hover);
     transition-duration: 250ms;
     transition-property: all;
 }
