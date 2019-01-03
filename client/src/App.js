@@ -6,6 +6,7 @@ import Home from "./Component/Home/Home";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
+import Footer from './Component/Footer/Footer'
 
 class App extends Component {
   constructor() {
@@ -164,6 +165,7 @@ class App extends Component {
 
               )} /> */}
           </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );
