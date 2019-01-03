@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./Component/Home/Home";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
-import Dashboard from "./Component/Dashboard/Dashboard";
+import ProfileDisplay from "./Component/Dashboard/ProfileDisplay";
 import Footer from "./Component/Footer/Footer";
 import Profile from "./Component/Profile/Profile";
 
@@ -139,7 +139,7 @@ class App extends Component {
               path="/"
               render={props =>
                 localStorage.token ? (
-                  <Dashboard
+                  <ProfileDisplay
                     {...props}
                     loggedinUser={localStorage.loggedInUser || null}
                     _id={localStorage.loginId}
