@@ -124,8 +124,10 @@ const Register = props => {
           </span>
           <input
             className='register__form__field__text'
-            type='text'
+            type='date'
             name='dob'
+            min='1940-01-01'
+            max='2019-01-02'
             placeholder='Enter your date of birth'
             onChange={props.handleChange}
           />
