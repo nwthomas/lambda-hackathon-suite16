@@ -89,15 +89,7 @@ class App extends Component {
             firstname={this.state.firstname}
             lastname={this.state.lastname}
             username={this.state.username}
-            password={this.state.password}
-            email={this.state.email}
-            avatar={this.state.avatar}
-            location={this.state.location}
-            creds={this.state.creds}
-            cats={this.state.cats}
-            role={this.state.role}
-            addNewUser={this.addNewUser}
-            handleChange={this.handleChange}
+
           />
           <Switch>
             <Route path='/' render={() => (
