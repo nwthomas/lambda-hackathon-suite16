@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./Component/Home/Home";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
-import ProfileDisplay from "./Component/Dashboard/ProfileDisplay";
+import Dashboard from "./Component/Dashboard/Dashboard";
 import Footer from "./Component/Footer/Footer";
 import Profile from "./Component/Profile/Profile";
 
@@ -30,7 +30,7 @@ class App extends Component {
       specialty: "",
       dob: "",
       loggedIn: false,
-      currentUserName: "",
+      currentUserName: ""
     };
   }
 
@@ -71,6 +71,18 @@ class App extends Component {
           }
         )
       );
+  };
+
+  deleteUser = id => {
+    fetch(`http://71.65.239.221:5000/api/users/${id}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(data => console.log(data));
   };
 
   logInUser = e => {
@@ -141,7 +153,7 @@ class App extends Component {
               path="/"
               render={props =>
                 localStorage.token ? (
-                  <ProfileDisplay
+                  <Dashboard
                     {...props}
                     loggedinUser={localStorage.loggedInUser || null}
                     _id={localStorage.loginId}
