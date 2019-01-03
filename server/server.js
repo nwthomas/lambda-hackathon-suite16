@@ -93,33 +93,37 @@ app.post("/api/users/login", (req, res) => {
     if (err) {
       res.json({ message: "Auth Failed" });
     }
-    bcrypt.compare(password, user.password, function(err, result) {
-      if (result) {
-        const loggedinUser = [];
-        loggedinUser.push({
-          username: user.username,
-          firstname: user.firstname,
-          lastname: user.lastname,
-          rating: user.rating,
-          avatar: user.avatar,
-          email: user.email,
-          dob: user.dob,
-          location: user.location,
-          creds: user.creds,
-          role: user.role
-        });
-        const token = jwt.sign(
-          { username: user.username, email: user.email },
-          "thisislambdaschool",
-          {
-            expiresIn: "1h"
-          }
-        );
-        res.json({ message: "successful login", token, user });
-      } else {
-        res.json({ message: "Login Failed" });
-      }
-    });
+    try {
+      bcrypt.compare(password, user.password, function(err, result) {
+        if (result) {
+          const loggedinUser = [];
+          loggedinUser.push({
+            username: user.username,
+            firstname: user.firstname,
+            lastname: user.lastname,
+            rating: user.rating,
+            avatar: user.avatar,
+            email: user.email,
+            dob: user.dob,
+            location: user.location,
+            creds: user.creds,
+            role: user.role
+          });
+          const token = jwt.sign(
+            { username: user.username, email: user.email },
+            "thisislambdaschool",
+            {
+              expiresIn: "1h"
+            }
+          );
+          res.json({ message: "successful login", token, user });
+        } else {
+          res.json({ message: "Login Failed" });
+        }
+      });
+    } catch (err) {
+      res.status(401).json(err);
+    }
   });
 });
 
