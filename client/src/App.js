@@ -15,6 +15,7 @@ class App extends Component {
     this.state = {
       loginVerified: false,
       data: [],
+      profiles: [],
       loggedInUser: [],
       firstname: "",
       lastname: "",
@@ -28,11 +29,16 @@ class App extends Component {
       role: "",
       dob: "",
       loggedIn: false,
-      currentUserName: ""
+      currentUserName: "",
+      selectedRole: ""
     };
   }
 
   componentDidMount() {
+    fetch("http://71.65.239.221:5000/api/users")
+      .then(res => res.json())
+      .then(profiles => this.setState({profiles})); 
+    
     if (localStorage.token) {
       return this.setState({
         loggedIn: true
@@ -94,7 +100,7 @@ class App extends Component {
           },
           () => {
             if (localStorage.token) {
-              window.location.replace("/dashboard");
+              window.location.replace("/");
             } else {
               alert("USER NOT FOUND");
             }
@@ -113,8 +119,13 @@ class App extends Component {
     });
   };
 
+  onRoleChange = e => {
+    this.setState({
+      selectedRole: e.target.value
+    })
+  };
+
   render() {
-    console.log(this.state);
     return (
       <BrowserRouter className="App">
         <div>
@@ -130,6 +141,8 @@ class App extends Component {
                   <Dashboard
                     {...props}
                     loggedinUser={localStorage.loggedInUser || null}
+                    _id="5c2d017e8259fb14f0ee1496"
+                    profiles={this.state.profiles}
                   />
                 ) : (
                   <Home />
@@ -156,6 +169,8 @@ class App extends Component {
                   state={this.state}
                   addNewUser={this.addNewUser}
                   handleChange={this.handleChange}
+                  onRoleChange={this.onRoleChange}
+                  selectedRole={this.state.selectedRole}
                 />
               )}
             />

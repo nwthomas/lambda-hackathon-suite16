@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Profile from "../Profile/Profile";
 
-const Dashboard = () => {
+const Dashboard = props => {
   return (
     <div>
-      <h1>dashboard</h1>
+      <Profile _id={props._id} profiles={props.profiles}/>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

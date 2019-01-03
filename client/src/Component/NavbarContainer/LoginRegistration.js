@@ -5,7 +5,10 @@ import { NavLink } from "react-router-dom";
 const LoginRegistration = props => {
   return (
     <div className="login__registration">
-      <NavLink className="navlink" to="/login">
+      <NavLink
+        className={localStorage.token ? "navlink--hidden" : "navlink"}
+        to="/login"
+      >
         <button
           className={
             localStorage.token
@@ -16,7 +19,10 @@ const LoginRegistration = props => {
           Login
         </button>
       </NavLink>
-      <NavLink className="navlink" to="/register">
+      <NavLink
+        className={localStorage.token ? "navlink--hidden" : "navlink"}
+        to="/register"
+      >
         <button
           className={
             localStorage.token
@@ -28,7 +34,10 @@ const LoginRegistration = props => {
         </button>
       </NavLink>
 
-      <NavLink className="navlink" to="/">
+      <NavLink
+        className={localStorage.token ? "navlink" : "navlink--hidden"}
+        to="/"
+      >
         <button
           className={
             localStorage.token
@@ -39,7 +48,10 @@ const LoginRegistration = props => {
           Chat
         </button>
       </NavLink>
-      <NavLink className="navlink" to="/">
+      <NavLink
+        className={localStorage.token ? "navlink" : "navlink--hidden"}
+        to="/"
+      >
         <button
           className={
             localStorage.token
