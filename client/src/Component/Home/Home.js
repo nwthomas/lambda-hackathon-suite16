@@ -11,9 +11,6 @@ const Home = () => {
       <div className="home__hero__container">
         <img src={homeHeader} alt="" />
         <h1 className="home__title">Lambda Financial Advisor</h1>
-        <p>
-          "A goal without a plan is just a wish." - Antoine de Saint-Exupery
-        </p>
       </div>
     </div>
   );
