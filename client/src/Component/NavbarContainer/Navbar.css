@@ -55,16 +55,18 @@
   -webkit-border-radius: 8px;
   font-size: 1.4rem;
   background: var(--navbar-btn-bg);
-  color: var(--navbar-color);
+  color: var(--navbar-btn-color);
   font-size: 1.4rem;
   font-family: var(--headers);
   cursor: pointer;
 }
 
 .navbar__button:hover {
-  border: 2px solid var(--navbar-btn-bg);
-  color: var(--navbar-btn-bg);
+  border: 2px solid var(--navbar-btn-border-hover);
+  color: var(--navbar-btn-color-hover);
   background: var(--navbar-btn-bg-hover);
+  transition-duration: 250ms;
+  transition-property: all;
 }
 
 @media (max-width: 500px) {
