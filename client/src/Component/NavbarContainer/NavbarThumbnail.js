@@ -9,7 +9,7 @@ const NavbarThumbnail = props => {
         <img src={defaultPicture} alt="User thumbnail" />
       </div>
       <a className="navbar__username__link" href="/">
-        {props.username}
+        {!props.loggedInUser ? null : props.loggedInUser}
       </a>
     </div>
   );
