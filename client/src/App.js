@@ -7,7 +7,6 @@ import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
 import Footer from "./Component/Footer/Footer";
-import VideoChat from "./Component/VideoChat/VideoChat";
 import Profile from "./Component/Profile/Profile";
 
 class App extends Component {
@@ -38,8 +37,8 @@ class App extends Component {
   componentDidMount() {
     fetch("http://71.65.239.221:5000/api/users")
       .then(res => res.json())
-      .then(profiles => this.setState({profiles})); 
-    
+      .then(profiles => this.setState({ profiles }));
+
     if (localStorage.token) {
       return this.setState({
         loggedIn: true
@@ -124,7 +123,7 @@ class App extends Component {
   onRoleChange = e => {
     this.setState({
       selectedRole: e.target.value
-    })
+    });
   };
 
   render() {
@@ -186,7 +185,6 @@ class App extends Component {
 
               )} /> */}
           </Switch>
-          <VideoChat />
           <Footer />
         </div>
       </BrowserRouter>
