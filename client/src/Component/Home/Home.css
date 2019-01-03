@@ -2,11 +2,11 @@
 
 .home__container {
   width: 100%;
-  margin-top: 80px
+  margin-top: 80px;
 }
 
 .home__hero__container {
-  max-width: 1800px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -36,9 +36,6 @@
   height: 300px;
 }
 
-.quote__section {
-}
-
 .category__icon {
   height: 120px;
   width: 120px;
@@ -48,7 +45,8 @@
 .icon__wrapper {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10%;
+  margin: 130px auto 0;
+  max-width: 1200px;
 }
 
 .category__text {
@@ -70,6 +68,11 @@
 
 .icon__container {
   width: 15%;
+}
+
+.parent__profile {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (max-width: 800px) {
