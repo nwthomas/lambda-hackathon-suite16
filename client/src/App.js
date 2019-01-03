@@ -15,6 +15,7 @@ class App extends Component {
     this.state = {
       loginVerified: false,
       data: [],
+      profiles: [],
       loggedInUser: [],
       firstname: "",
       lastname: "",
@@ -33,6 +34,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    fetch("http://71.65.239.221:5000/api/users")
+      .then(res => res.json())
+      .then(profiles => this.setState({profiles})); 
+    
     if (localStorage.token) {
       return this.setState({
         loggedIn: true
@@ -114,7 +119,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <BrowserRouter className="App">
         <div>
@@ -130,6 +134,8 @@ class App extends Component {
                   <Dashboard
                     {...props}
                     loggedinUser={localStorage.loggedInUser || null}
+                    _id="5c2d017e8259fb14f0ee1496"
+                    profiles={this.state.profiles}
                   />
                 ) : (
                   <Home />
