@@ -6,7 +6,8 @@ import Home from "./Component/Home/Home";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
-import Footer from './Component/Footer/Footer'
+import Footer from "./Component/Footer/Footer";
+import VideoChat from "./Component/VideoChat/VideoChat";
 
 class App extends Component {
   constructor() {
@@ -113,11 +114,14 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <BrowserRouter className="App">
         <div>
-          <NavbarContainer loggedInUser={localStorage.loggedInUser || null} logOutUser={this.logOutUser} />
+          <NavbarContainer
+            loggedInUser={localStorage.loggedInUser || null}
+            logOutUser={this.logOutUser}
+          />
           <Switch>
             <Route
               path="/"
@@ -128,8 +132,8 @@ class App extends Component {
                     loggedinUser={localStorage.loggedInUser || null}
                   />
                 ) : (
-                    <Home />
-                  )
+                  <Home />
+                )
               }
               exact
             />
@@ -165,6 +169,7 @@ class App extends Component {
 
               )} /> */}
           </Switch>
+          <VideoChat />
           <Footer />
         </div>
       </BrowserRouter>
