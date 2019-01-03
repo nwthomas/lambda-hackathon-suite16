@@ -1,0 +1,20 @@
+@import url("../../Styles/Variables.css");
+
+.home__container {
+  width: 100%;
+  margin: 80px auto 0;
+}
+
+.home__hero__container {
+  position: relative;
+}
+
+.home__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 50%;
+  background: rgba(256, 256, 256, 0.6);
+  padding: 20px 0;
+}
