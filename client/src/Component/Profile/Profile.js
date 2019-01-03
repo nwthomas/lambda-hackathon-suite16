@@ -1,6 +1,5 @@
 import React from "react";
 import "./Profile.css";
-import VideoChat from "../VideoChat/VideoChat";
 
 const Profile = props => {
   const target = props.profiles.filter(profile => profile._id === props._id)[0];
@@ -41,7 +40,7 @@ const Profile = props => {
       <div className="profile__data">
         <div className="profile__data__left">
           <div className="profile__data__left__avatar">
-            <img src={target.avatar} alt={`{${target.username}'s avatar}`} />
+            <img src={target.avatar} alt={`${target.username}'s avatar`} />
           </div>
           <span className="profile__data__left__rating">
             Rating: {target.rating}
@@ -98,15 +97,14 @@ const Profile = props => {
           </div>
           <div className="profile__data__right__field">
             <span className="profile__data__right__field__label">
-              Specialty role:{" "}
+              User type:
             </span>
             <span className="profile__data__right__field__value">
-              {target.role}
+              {target.role === "advisee" ? "Advisee" : `Advisor (${target.specialty || "specialty pending"})`}
             </span>
           </div>
         </div>
       </div>
-      <VideoChat />
     </div>
   );
 };

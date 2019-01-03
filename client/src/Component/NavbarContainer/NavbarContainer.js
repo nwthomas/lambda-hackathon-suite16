@@ -6,8 +6,11 @@ import "./Navbar.css";
 const NavbarContainer = props => {
   return (
     <div className="navbar__container">
-      <NavbarThumbnail loggedInUser={props.loggedInUser} />
-      <LoginRegistration logOutUser={props.logOutUser}/>
+      <NavbarThumbnail
+        userAvatar={props.userAvatar}
+        loggedInUser={props.loggedInUser}
+      />
+      <LoginRegistration logOutUser={props.logOutUser} />
     </div>
   );
 };

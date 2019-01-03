@@ -25,12 +25,12 @@ class App extends Component {
       avatar: "",
       location: "",
       creds: "",
-      cats: "",
+      cats: "dogs", // DON'T TOUCH -> not used, but needed as placeholder to make registration form work
       role: "",
+      specialty: "",
       dob: "",
       loggedIn: false,
       currentUserName: "",
-      selectedRole: ""
     };
   }
 
@@ -89,6 +89,7 @@ class App extends Component {
         if (loggedInUser.user) {
           localStorage.setItem("loginId", loggedInUser.user._id);
           localStorage.setItem("loggedInUser", loggedInUser.user.firstname);
+          localStorage.setItem("avatar", loggedInUser.user.avatar);
         } else {
           localStorage.clear();
           return alert("Login Failed");
@@ -118,12 +119,12 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-  };
 
-  onRoleChange = e => {
-    this.setState({
-      selectedRole: e.target.value
-    });
+    if (e.target.name === "role" && e.target.value === "advisee") {
+      this.setState({
+        specialty: "N/A"
+      });
+    }
   };
 
   render() {
@@ -133,6 +134,7 @@ class App extends Component {
           <NavbarContainer
             loggedInUser={localStorage.loggedInUser || null}
             logOutUser={this.logOutUser}
+            userAvatar={localStorage.avatar}
           />
           <Switch>
             <Route
@@ -170,8 +172,7 @@ class App extends Component {
                   state={this.state}
                   addNewUser={this.addNewUser}
                   handleChange={this.handleChange}
-                  onRoleChange={this.onRoleChange}
-                  selectedRole={this.state.selectedRole}
+                  selectedRole={this.state.role}
                 />
               )}
             />
