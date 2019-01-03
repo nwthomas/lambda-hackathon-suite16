@@ -7,7 +7,7 @@ import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
 import Footer from "./Component/Footer/Footer";
-import VideoChat from "./Component/VideoChat/VideoChat";
+import Profile from "./Component/Profile/Profile";
 
 class App extends Component {
   constructor() {
@@ -25,20 +25,20 @@ class App extends Component {
       avatar: "",
       location: "",
       creds: "",
-      cats: "",
+      cats: "dogs", // DON'T TOUCH -> not used, but needed as placeholder to make registration form work
       role: "",
+      specialty: "",
       dob: "",
       loggedIn: false,
-      currentUserName: "",
-      selectedRole: ""
+      currentUserName: ""
     };
   }
 
   componentDidMount() {
     fetch("http://71.65.239.221:5000/api/users")
       .then(res => res.json())
-      .then(profiles => this.setState({profiles})); 
-    
+      .then(profiles => this.setState({ profiles }));
+
     if (localStorage.token) {
       return this.setState({
         loggedIn: true
@@ -73,6 +73,18 @@ class App extends Component {
       );
   };
 
+  deleteUser = id => {
+    fetch(`http://71.65.239.221:5000/api/users/${id}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(data => console.log(data));
+  };
+
   logInUser = e => {
     e.preventDefault();
     fetch("http://71.65.239.221:5000/api/users/login", {
@@ -87,7 +99,9 @@ class App extends Component {
       .then(loggedInUser => {
         localStorage.setItem("token", loggedInUser.token);
         if (loggedInUser.user) {
+          localStorage.setItem("loginId", loggedInUser.user._id);
           localStorage.setItem("loggedInUser", loggedInUser.user.firstname);
+          localStorage.setItem("avatar", loggedInUser.user.avatar);
         } else {
           localStorage.clear();
           return alert("Login Failed");
@@ -117,12 +131,12 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-  };
 
-  onRoleChange = e => {
-    this.setState({
-      selectedRole: e.target.value
-    })
+    if (e.target.name === "role" && e.target.value === "advisee") {
+      this.setState({
+        specialty: "N/A"
+      });
+    }
   };
 
   render() {
@@ -132,6 +146,7 @@ class App extends Component {
           <NavbarContainer
             loggedInUser={localStorage.loggedInUser || null}
             logOutUser={this.logOutUser}
+            userAvatar={localStorage.avatar}
           />
           <Switch>
             <Route
@@ -141,7 +156,7 @@ class App extends Component {
                   <Dashboard
                     {...props}
                     loggedinUser={localStorage.loggedInUser || null}
-                    _id="5c2d017e8259fb14f0ee1496"
+                    _id={localStorage.loginId}
                     profiles={this.state.profiles}
                   />
                 ) : (
@@ -169,8 +184,7 @@ class App extends Component {
                   state={this.state}
                   addNewUser={this.addNewUser}
                   handleChange={this.handleChange}
-                  onRoleChange={this.onRoleChange}
-                  selectedRole={this.state.selectedRole}
+                  selectedRole={this.state.role}
                 />
               )}
             />
@@ -184,8 +198,7 @@ class App extends Component {
 
               )} /> */}
           </Switch>
-          <VideoChat />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </BrowserRouter>
     );

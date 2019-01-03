@@ -23,6 +23,7 @@ const Register = props => {
             name='username'
             placeholder='Enter a username'
             onChange={props.handleChange}
+            required
           />
         </div>
         <div
@@ -39,6 +40,7 @@ const Register = props => {
             name='firstname'
             placeholder='Enter your first name'
             onChange={props.handleChange}
+            required
           />
         </div>
         <div
@@ -55,6 +57,7 @@ const Register = props => {
             name='lastname'
             placeholder='Enter your last name'
             onChange={props.handleChange}
+            required
           />
         </div>
         <div
@@ -71,6 +74,7 @@ const Register = props => {
             name='password'
             placeholder='Enter a secure password'
             onChange={props.handleChange}
+            required
           />
         </div>
         <div
@@ -87,6 +91,7 @@ const Register = props => {
             name='email'
             placeholder='Enter your email address'
             onChange={props.handleChange}
+            required
           />
         </div>
         <div
@@ -103,16 +108,9 @@ const Register = props => {
             name='avatar'
             placeholder='Enter a URL for your avatar photo'
             onChange={props.handleChange}
+            required
           />
         </div>
-        {/* <input
-        className="register__dob"
-          type='date'
-          name='dob'
-          min='1940-01-01'
-          max='2019-01-02'
-          onChange={props.handleChange}
-        /> */}
         <div
           className="register__form__field"
         >
@@ -129,6 +127,7 @@ const Register = props => {
             max='2019-01-02'
             placeholder='Enter your date of birth'
             onChange={props.handleChange}
+            required
           />
         </div>
         <div
@@ -145,6 +144,7 @@ const Register = props => {
             name='location'
             placeholder='Enter your location'
             onChange={props.handleChange}
+            required
           />
         </div>
         <div
@@ -161,15 +161,9 @@ const Register = props => {
             name='creds'
             placeholder='Enter your credentials'
             onChange={props.handleChange}
+            required
           />
         </div>
-        {/* <select className="register__role-list" name='cats' onChange={props.handleChange}>
-          <option value='taxes'>Taxes</option>
-          <option value='investing'>Investing</option>
-          <option value='estate'>Estate Planning</option>
-          <option value='financial'>Financial Planning</option>
-        </select> */}
-
         <div
           className="register__form__field"
         >
@@ -180,8 +174,9 @@ const Register = props => {
           </span>
           <select 
             className="register__form__field__text" 
-            name='cats' 
-            onChange={e => props.onRoleChange(e)}
+            name='role' 
+            onChange={props.handleChange}
+            required
           >
             <option disabled selected value="">Select a role</option>
             <option value="advisee">I want to be an advisee</option>
@@ -198,8 +193,9 @@ const Register = props => {
           </span>
           <select 
             className="register__form__field__text" 
-            name='cats' 
+            name='specialty' 
             onChange={props.handleChange}
+            required ={props.selectedRole === "advisor"}
           >
             <option disabled selected value="">Select a finance topic that you specialize in</option>
             <option value='taxes'>Taxes</option>

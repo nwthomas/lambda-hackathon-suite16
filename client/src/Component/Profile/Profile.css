@@ -2,116 +2,117 @@
 @import url("../../Styles/Variables.css");
 
 .profile-container {
-    width: 85%;
-    margin: 150px auto 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 150px auto 0;
 }
 
 .profile__heading {
-    font-size: 3.2rem;
-    font-weight: bold;
-    margin-bottom: 50px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .profile__data {
-    display: flex;
+  display: flex;
 }
 
 .profile__data__left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5%;
 }
 
 .profile__data__left__avatar {
-    width: 100%;
-    height: 250px;
-    text-align: center;
+  width: 100%;
+  height: 250px;
+  text-align: center;
 }
 
 .profile__data__left__avatar img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .profile__data__left__rating {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 37.5px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 37.5px;
 }
 
 .profile__data__right {
-    width: 100%;
+  width: 100%;
 }
 
 .profile__data__right__field {
-    display: flex;
-    align-items: baseline;
-    margin: 15px 0 35px;
+  display: flex;
+  align-items: baseline;
+  margin: 15px 0 35px;
 }
 
 .profile__data__right__field__label {
-    width: 150px;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-right: 5%;
+  width: 150px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 5%;
 }
 
 .profile__data__right__field__value {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 @media (max-width: 800px) {
-    .profile__data {
-        flex-direction: column;
-    }
+  .profile__data {
+    flex-direction: column;
+  }
 
-    .profile__data__right {
-        margin-top: 50px;
-    }
+  .profile__data__right {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 500px) {
-    .profile__heading {
-        font-size: 3.2rem;
-        font-weight: bold;
-        margin-bottom: 35px;
-    }
+  .profile__heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
 
-    .profile__data__left__avatar {
-        width: 100%;
-        height: 200px;
-    }
-    
-    .profile__data__left__avatar img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-    }
+  .profile__data__left__avatar {
+    width: 100%;
+    height: 200px;
+  }
 
-    .profile__data__left__rating {
-        text-align: center;
-        font-size: 2.25rem;
-        font-weight: bold;
-        margin-top: 25px;
-    }
+  .profile__data__left__avatar img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
 
-    .profile__data__right {
-        margin-top: 37.5px;
-    }
+  .profile__data__left__rating {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-top: 25px;
+  }
 
-    .profile__data__right__field {
-        margin: 15px 0 30px;
-    }
+  .profile__data__right {
+    margin-top: 37.5px;
+  }
 
-    .profile__data__right__field__label {
-        width: 125px;
-        font-size: 1.6rem;
-    }
+  .profile__data__right__field {
+    margin: 15px 0 30px;
+  }
 
-    .profile__data__right__field__value {
-        font-size: 1.6rem;
-    }
+  .profile__data__right__field__label {
+    width: 125px;
+    font-size: 1.6rem;
+  }
+
+  .profile__data__right__field__value {
+    font-size: 1.6rem;
+  }
 }
