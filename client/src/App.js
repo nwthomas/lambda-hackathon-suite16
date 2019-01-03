@@ -185,7 +185,7 @@ class App extends Component {
               )} /> */}
           </Switch>
           <VideoChat />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </BrowserRouter>
     );

@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import "./Home.css";
 import homeHeader from "../../Images/home-header.jpg";
 import HomeCategory from "./HomeCategory";
-import ProfileCardContainer from "./ProfileCard/ProfileCardContainer";
-import ProfileCardContainer1 from "./ProfileCard/ProfileCardContainer1";
-import ProfileCardContainer2 from "./ProfileCard/ProfileCardContainer2";
+import ProfileCardContainer from "../ProfileCard/ProfileCardContainer";
+import ProfileCardContainer1 from "../ProfileCard/ProfileCardContainer1";
+import ProfileCardContainer2 from "../ProfileCard/ProfileCardContainer2";
 
 const Home = () => {
   return (

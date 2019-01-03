@@ -5,6 +5,7 @@ const ProfileCardBtn = props => {
   return (
     <div className="profile__button__container">
       <p className="profile__card__review">{props.review}</p>
+
       <div className="button__section">
         <button className="profile__button profile__card__button">
           Go To Profile
