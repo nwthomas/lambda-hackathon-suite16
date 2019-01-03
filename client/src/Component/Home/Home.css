@@ -2,16 +2,13 @@
 
 .home__container {
   width: 100%;
-<<<<<<< HEAD
   display: grid;
-=======
   max-width: 1200px;
   margin: 100px auto;
 }
 
 .home__hero__container {
   max-width: 1200px;
->>>>>>> 8f1b3b253c9184998a6bc12583dbe11ff2af9679
   margin: 0 auto;
 }
 
@@ -48,17 +45,14 @@
 
 .icon__wrapper {
   display: grid;
-<<<<<<< HEAD
   margin-left: 4%;
   margin-right: 4%;
 
   margin-top: 25%;
   margin-bottom: 20%;
-=======
   grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
   margin: 150px auto;
   max-width: 1200px;
->>>>>>> 8f1b3b253c9184998a6bc12583dbe11ff2af9679
 }
 
 .icon__container {
