@@ -70,6 +70,10 @@
   transition-property: all;
 }
 
+.navbar__button--hidden {
+  display: none;
+}
+
 @media (max-width: 500px) {
   .navbar__container {
     height: 60px;

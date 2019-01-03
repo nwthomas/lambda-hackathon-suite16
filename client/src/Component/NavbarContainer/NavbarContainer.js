@@ -7,7 +7,7 @@ const NavbarContainer = props => {
   return (
     <div className="navbar__container">
       <NavbarThumbnail loggedInUser={props.loggedInUser} />
-      <LoginRegistration />
+      <LoginRegistration logOutUser={props.logOutUser}/>
     </div>
   );
 };
