@@ -1,6 +1,5 @@
 import React from "react";
 import "./Profile.css";
-import VideoChat from "../VideoChat/VideoChat";
 
 const Profile = props => {
   const target = props.profiles.filter(profile => profile._id === props._id)[0];
@@ -106,7 +105,6 @@ const Profile = props => {
           </div>
         </div>
       </div>
-      <VideoChat />
     </div>
   );
 };
