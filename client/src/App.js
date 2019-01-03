@@ -8,6 +8,7 @@ import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
 import Footer from "./Component/Footer/Footer";
 import VideoChat from "./Component/VideoChat/VideoChat";
+import Profile from "./Component/Profile/Profile";
 
 class App extends Component {
   constructor() {
@@ -87,6 +88,7 @@ class App extends Component {
       .then(loggedInUser => {
         localStorage.setItem("token", loggedInUser.token);
         if (loggedInUser.user) {
+          localStorage.setItem("loginId", loggedInUser.user._id);
           localStorage.setItem("loggedInUser", loggedInUser.user.firstname);
         } else {
           localStorage.clear();
@@ -141,7 +143,7 @@ class App extends Component {
                   <Dashboard
                     {...props}
                     loggedinUser={localStorage.loggedInUser || null}
-                    _id="5c2d017e8259fb14f0ee1496"
+                    _id={localStorage.loginId}
                     profiles={this.state.profiles}
                   />
                 ) : (
