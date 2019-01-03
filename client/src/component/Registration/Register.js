@@ -2,6 +2,7 @@ import React from 'react';
 import './Register.css';
 
 const Register = props => {
+  console.log(props.state);
   return (
     <div className='register__container'>
       <form className='register__form' onSubmit={props.addNewUser}>

@@ -1,7 +1,7 @@
 @import "../../Styles/Variables.css";
 
 .navbar__container {
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@
   -webkit-box-shadow: -1px 6px 5px -2px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: -1px 6px 5px -2px rgba(0, 0, 0, 0.12);
   box-shadow: -1px 6px 5px -2px rgba(0, 0, 0, 0.12);
+  z-index: 100;
 }
 
 .navbar__thumbnail {
@@ -55,16 +56,18 @@
   -webkit-border-radius: 8px;
   font-size: 1.4rem;
   background: var(--navbar-btn-bg);
-  color: var(--navbar-color);
+  color: var(--navbar-btn-color);
   font-size: 1.4rem;
   font-family: var(--headers);
   cursor: pointer;
 }
 
 .navbar__button:hover {
-  border: 2px solid var(--navbar-btn-bg);
-  color: var(--navbar-btn-bg);
+  border: 2px solid var(--navbar-btn-border-hover);
+  color: var(--navbar-btn-color-hover);
   background: var(--navbar-btn-bg-hover);
+  transition-duration: 250ms;
+  transition-property: all;
 }
 
 @media (max-width: 500px) {

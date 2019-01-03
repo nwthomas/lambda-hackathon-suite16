@@ -5,15 +5,20 @@
   --navbar--bg: var(--dusty-gray);
   --navbar-color: var(--white);
   --navbar-btn-bg: var(--strikemaster);
+  --navbar-btn-color:var(--white);
   --navbar-btn-bg-hover: var(--white);
-  --login-btn-bg: var(--dusty-gray);
-  --login-btn-color: var(--hint-of-red);
-  --login-btn-bg-hover: var(--hint-of-red);
+  --navbar-btn-color-hover: var(--strikemaster);
+  --navbar-btn-border-hover: var(--strikemaster);
+  --login-btn-bg: var(--strikemaster);
+  --login-btn-color: var(--white);
+  --login-btn-bg-hover: var(--white);
   --login-btn-color-hover: var(--strikemaster);
-  --register-btn-bg: var(--dusty-gray);
-  --register-btn-color: var(--hint-of-red);
-  --register-btn-bg-hover: var(--hint-of-red);
+  --login-btn-border-hover: var(--strikemaster);
+  --register-btn-bg: var(--strikemaster);
+  --register-btn-color: var(--white);
+  --register-btn-bg-hover: var(--white);
   --register-btn-color-hover: var(--strikemaster);
+  --register-btn-border-hover: var(--strikemaster);
 }
 
 /*--- Color Values ---*/
