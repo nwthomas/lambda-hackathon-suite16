@@ -24,21 +24,17 @@ class App extends Component {
       "creds": '',
       "cats": '',
       "role": '',
-      loggedIn: false
+      "loggedIn": false
     };
   }
 
   componentDidMount() {
-    if (this.state.loggedInUser.length > 0) {
+    if (window.localStorage.token) {
       return this.setState({
         loggedIn: true
-      })
-    } else {
-      return;
+      });
     }
   }
-
-
 
   addNewUser = e => {
     e.preventDefault();
@@ -69,9 +65,12 @@ class App extends Component {
       body: JSON.stringify(this.state)
     })
       .then(res => res.json())
-      .then(loggedInUser => this.setState({
-        loggedInUser
-      }));
+      .then(loggedInUser => {
+        localStorage.setItem('token', loggedInUser.token)
+        this.setState({
+          loggedInUser
+        })
+      });
   };
 
   handleChange = e => {
@@ -81,7 +80,7 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.loggedInUser)
+    console.log(window.localStorage)
     return (
       <BrowserRouter className='App'>
         <div>
@@ -89,20 +88,11 @@ class App extends Component {
             firstname={this.state.firstname}
             lastname={this.state.lastname}
             username={this.state.username}
-            password={this.state.password}
-            email={this.state.email}
-            avatar={this.state.avatar}
-            location={this.state.location}
-            creds={this.state.creds}
-            cats={this.state.cats}
-            role={this.state.role}
-            addNewUser={this.addNewUser}
-            handleChange={this.handleChange}
           />
           <Switch>
             <Route path='/' render={() => (
               this.loggedIn ? (
-                <Redirect to="/dashboard" />
+                <Dashboard />
               ) : (
                   <Home />
                 )
@@ -139,7 +129,6 @@ class App extends Component {
 
               )} /> */}
           </Switch>
-
         </div>
       </BrowserRouter>
     );

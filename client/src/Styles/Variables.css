@@ -5,7 +5,7 @@
   --navbar--bg: var(--dusty-gray);
   --navbar-color: var(--white);
   --navbar-btn-bg: var(--strikemaster);
-  --navbar-btn-color:var(--white);
+  --navbar-btn-color: var(--white);
   --navbar-btn-bg-hover: var(--white);
   --navbar-btn-color-hover: var(--strikemaster);
   --navbar-btn-border-hover: var(--strikemaster);
@@ -19,6 +19,7 @@
   --register-btn-bg-hover: var(--white);
   --register-btn-color-hover: var(--strikemaster);
   --register-btn-border-hover: var(--strikemaster);
+  --home-headline-color: var(--white);
 }
 
 /*--- Color Values ---*/

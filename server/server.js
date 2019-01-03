@@ -4,10 +4,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const User = require("./src/models/user.model");
 const bcrypt = require("bcryptjs");
-
+const jwt = require("jsonwebtoken");
+const auth = require("./src/middleware/check-auth");
 const app = express();
 
 app.use(bodyParser.json());
+
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -93,7 +95,27 @@ app.post("/api/users/login", (req, res) => {
     }
     bcrypt.compare(password, user.password, function(err, result) {
       if (result) {
-        res.json(user);
+        const loggedinUser = [];
+        loggedinUser.push({
+          username: user.username,
+          firstname: user.firstname,
+          lastname: user.lastname,
+          rating: user.rating,
+          avatar: user.avatar,
+          email: user.email,
+          dob: user.dob,
+          location: user.location,
+          creds: user.creds,
+          role: user.role
+        });
+        const token = jwt.sign(
+          { username: user.username, email: user.email },
+          "thisislambdaschool",
+          {
+            expiresIn: "1h"
+          }
+        );
+        res.json({ message: "successful login", token, user });
       } else {
         res.json({ message: "Login Failed" });
       }
@@ -110,7 +132,7 @@ app.get("/api/categories", (req, res) => {
   ]);
 });
 
-app.get("/api/users", (req, res) => {
+app.get("/api/users", auth, (req, res) => {
   User.find({}, (err, users) => {
     if (err) {
       res.status(400).json({ message: "Error Retrieving Users" });
