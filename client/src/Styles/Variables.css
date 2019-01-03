@@ -20,6 +20,7 @@
   --register-btn-color-hover: var(--strikemaster);
   --register-btn-border-hover: var(--strikemaster);
   --home-headline-color: var(--white);
+  --footer-bg: var(--saffron); /* --- Saffron, used RGBA for opacity --- */
 }
 
 /*--- Color Values ---*/
