@@ -29,12 +29,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    if (this.state.loggedInUser.length > 0) {
+    if (window.localStorage.token) {
       return this.setState({
         loggedIn: true
       })
-    } else {
-      return;
     }
   }
 
@@ -69,9 +67,12 @@ class App extends Component {
       body: JSON.stringify(this.state)
     })
       .then(res => res.json())
-      .then(loggedInUser => this.setState({
-        loggedInUser
-      }));
+      .then(loggedInUser => {
+        localStorage.setItem('token', loggedInUser.token)
+        this.setState({
+          loggedInUser
+        })
+      });
   };
 
   handleChange = e => {
@@ -81,7 +82,7 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.loggedInUser)
+    console.log(window.localStorage)
     return (
       <BrowserRouter className='App'>
         <div>
@@ -94,7 +95,7 @@ class App extends Component {
           <Switch>
             <Route path='/' render={() => (
               this.loggedIn ? (
-                <Redirect to="/dashboard" />
+                <Dashboard />
               ) : (
                   <Home />
                 )
