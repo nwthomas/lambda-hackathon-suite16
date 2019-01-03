@@ -1,11 +1,12 @@
 .footer {
   width: 100%;
+  max-width: 1800px;
   background-color: #141311;
-  position: fixed;
   bottom: 0;
   height: 200px;
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
 }
 
 .footer .footer__outer__container {
