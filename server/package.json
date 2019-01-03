@@ -15,6 +15,9 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.1"
+    "mongoose": "^5.4.1",
+    "pusher": "^2.2.0",
+    "simple-peer": "^9.2.0",
+    "twilio": "^3.26.1"
   }
 }
