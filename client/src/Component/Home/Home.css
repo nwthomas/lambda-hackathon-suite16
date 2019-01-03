@@ -33,3 +33,36 @@
   height: 300px;
   border: 1px solid red;
 }
+
+.category__icon {
+  height: 120px;
+  width: 120px;
+  justify-content: center;
+}
+
+.icon__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10%;
+}
+
+.category__text {
+  text-align: center;
+  font-size: 2.4rem;
+
+  padding: 20px;
+  opacity: 0.99;
+  border-radius: 15px;
+  margin-top: 20px;
+  color: black;
+  font-weight: 700;
+}
+.nathan {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.icon__container {
+  width: 15%;
+}
