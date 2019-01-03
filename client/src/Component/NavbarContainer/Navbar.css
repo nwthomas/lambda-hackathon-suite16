@@ -54,6 +54,10 @@
   margin-left: 5%;
 }
 
+.navlink--hidden {
+  margin-left: 0;
+}
+
 .navbar__button {
   height: 40px;
   width: 120px;
@@ -79,6 +83,7 @@
 
 .navbar__button--hidden {
   display: none;
+  margin: 0;
 }
 
 .navlink__chat {
