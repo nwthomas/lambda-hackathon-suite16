@@ -102,7 +102,7 @@ const Register = props => {
             className='register__form__field__text'
             type='text'
             name='avatar'
-            placeholder='Enter an image URL for your avatar photo'
+            placeholder='Enter a URL for your avatar photo'
             onChange={props.handleChange}
           />
         </div>
