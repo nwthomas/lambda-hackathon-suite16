@@ -1,0 +1,104 @@
+/*--- Import --- */
+@import url("../../Styles/Variables.css");
+
+.login__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 125px 0;
+}
+
+.login__form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    box-shadow: 1px 1px 2px 2px var(--silver);
+    padding: 37.5px 3.25%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login__form__heading {
+    text-align: center;
+    font-family: var(--headers);
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.login__form__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.login__form__field__label {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.login__form__field__text {
+    padding: 10px;
+}
+
+.login__form__button {
+    width: 100%;
+    background-color: var(--login-btn-bg);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--login-btn-color);
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+.login__form__button:hover {
+    background-color: var(--login-btn-bg-hover);
+    color: var(--login-btn-color-hover);
+    border: 2px solid var(--login-btn-border-hover);
+    transition-duration: 250ms;
+    transition-property: all;
+}
+
+.login__form__register {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+    .login__form {
+        width: 300px;
+        padding: 30px 7.5%;
+    }
+
+    .login__form__heading {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .login__form__field__label {
+        text-align: left;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .login__form__field__text {
+        padding: 7.5px;
+    }
+
+    .login__form__button {
+        width: 80%;
+        font-size: 1.6rem;
+        padding: 7.5px 0;
+        margin: 15px 0 30px;
+    }
+
+    .login__form__register{
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,45 @@
+/*--- Color Variables ---*/
+:root {
+  --paragraph-color: var(--black);
+  --header-color: var(--black);
+  --navbar--bg: var(--dusty-gray);
+  --navbar-color: var(--white);
+  --navbar-btn-bg: var(--strikemaster);
+  --navbar-btn-color:var(--white);
+  --navbar-btn-bg-hover: var(--white);
+  --navbar-btn-color-hover: var(--strikemaster);
+  --navbar-btn-border-hover: var(--strikemaster);
+  --login-btn-bg: var(--strikemaster);
+  --login-btn-color: var(--white);
+  --login-btn-bg-hover: var(--white);
+  --login-btn-color-hover: var(--strikemaster);
+  --login-btn-border-hover: var(--strikemaster);
+  --register-btn-bg: var(--strikemaster);
+  --register-btn-color: var(--white);
+  --register-btn-bg-hover: var(--white);
+  --register-btn-color-hover: var(--strikemaster);
+  --register-btn-border-hover: var(--strikemaster);
+}
+
+/*--- Color Values ---*/
+/*--- colors pulled from http://chir.ag/projects/name-that-color/#6195ED ---*/
+:root {
+  --saffron: #f7d736;
+  --strikemaster: #8e697b;
+  --dusty-gray: #b79fab;
+  --lola: #d7cad1;
+  --hint-of-red: #fbfafa;
+  --white: #ffffff;
+  --black: #000000;
+  --silver: #c0c0c0;
+}
+
+/*--- Font Variables ---*/
+:root {
+  --paragraph-font-family: "Roboto", sans-serif;
+  --headers: "Roboto", sans-serif;
+}
+
+/*
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+*/
