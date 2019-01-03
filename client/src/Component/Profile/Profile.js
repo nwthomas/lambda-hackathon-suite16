@@ -40,7 +40,7 @@ const Profile = props => {
       <div className="profile__data">
         <div className="profile__data__left">
           <div className="profile__data__left__avatar">
-            <img src={target.avatar} alt={`{${target.username}'s avatar}`} />
+            <img src={target.avatar} alt={`${target.username}'s avatar`} />
           </div>
           <span className="profile__data__left__rating">
             Rating: {target.rating}

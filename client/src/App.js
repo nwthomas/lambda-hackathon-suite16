@@ -25,12 +25,12 @@ class App extends Component {
       avatar: "",
       location: "",
       creds: "",
-      cats: "",
+      cats: "dogs", // DON'T TOUCH -> not used, but needed as placeholder to make registration form work
       role: "",
+      specialty: "",
       dob: "",
       loggedIn: false,
       currentUserName: "",
-      selectedRole: ""
     };
   }
 
@@ -127,12 +127,12 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-  };
 
-  onRoleChange = e => {
-    this.setState({
-      selectedRole: e.target.value
-    });
+    if (e.target.name === "role" && e.target.value === "advisee") {
+      this.setState({
+        specialty: "N/A"
+      });
+    }
   };
 
   render() {
@@ -180,8 +180,7 @@ class App extends Component {
                   state={this.state}
                   addNewUser={this.addNewUser}
                   handleChange={this.handleChange}
-                  onRoleChange={this.onRoleChange}
-                  selectedRole={this.state.selectedRole}
+                  selectedRole={this.state.role}
                 />
               )}
             />
