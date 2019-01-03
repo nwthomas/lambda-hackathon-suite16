@@ -6,7 +6,9 @@ import "./Navbar.css";
 const NavbarContainer = props => {
   return (
     <div className="navbar__container">
-      <NavbarThumbnail />
+      <NavbarThumbnail firstname={props.firstname}
+        lastname={props.lastname}
+        username={props.username} />
       <LoginRegistration />
     </div>
   );
