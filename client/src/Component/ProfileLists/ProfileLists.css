@@ -1,0 +1,7 @@
+.profile-lists__container {
+  height: 500px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto 40px;
+  border: 1px solid red;
+}
