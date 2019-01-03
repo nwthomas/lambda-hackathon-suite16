@@ -44,14 +44,6 @@ class App extends Component {
         loggedIn: true
       });
     }
-    setTimeout(function() {
-      localStorage.clear();
-    }, 100);
-    const script = document.createElement("script");
-    script.src =
-      "https://tokbox.com/embed/embed/ot-embed.js?embedId=9aad96ab-1297-4431-bd6a-b787c7cb14e0&room=DEFAULT_ROOM";
-    script.async = true;
-    document.body.appendChild(script);
   }
 
   addNewUser = e => {
@@ -147,12 +139,11 @@ class App extends Component {
           <Switch>
             <Route
               path="/"
-              exact
               render={props =>
-                localStorage.loggedInUser ? (
+                localStorage.token ? (
                   <Dashboard
                     {...props}
-                    loggedinUser={localStorage.loggedInUser}
+                    loggedinUser={localStorage.loggedInUser || null}
                     _id={localStorage.loginId}
                     profiles={this.state.profiles}
                   />
@@ -160,6 +151,7 @@ class App extends Component {
                   <Home />
                 )
               }
+              exact
             />
             <Route
               path="/login"
