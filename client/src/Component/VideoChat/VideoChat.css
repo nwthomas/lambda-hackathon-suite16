@@ -1,8 +1,7 @@
 #otEmbedContainer {
   width: 100%;
-  max-width: 1200px;
   height: 640px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   border: 5px solid black;
 }
 
@@ -11,6 +10,14 @@
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
+}
+
+.video--display {
+  display: block;
+}
+
+.video--hidden {
+  display: none;
 }
 
 /* style={{ width: "1800px", height: "1440px" }} */
