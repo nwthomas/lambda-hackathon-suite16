@@ -99,7 +99,7 @@ class App extends Component {
           },
           () => {
             if (localStorage.token) {
-              window.location.replace("/dashboard");
+              window.location.replace("/");
             } else {
               alert("USER NOT FOUND");
             }
