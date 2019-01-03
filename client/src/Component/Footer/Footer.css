@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  background-color: #141311;
+  height: 200px;
+}
+
+.footer .footer__container {
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer .footer__container .section {
+  color: white;
+}
+
+.footer .footer__container .section h2 {
+  font-size: 3rem;
+}
+
+.footer .footer__copyright {
+  color: white;
+}
