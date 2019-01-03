@@ -6,6 +6,9 @@
 }
 
 .home__hero__container {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -19,7 +22,7 @@
   padding: 30px 2%;
   color: var(--home-headline-color);
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -31,5 +34,7 @@
   width: 100%;
   margin: 110px auto 0;
   height: 300px;
-  border: 1px solid red;
+}
+
+.quote__section {
 }

@@ -37,8 +37,8 @@
 
 /*--- Font Variables ---*/
 :root {
-  --paragraph-font-family: "Roboto", sans-serif;
-  --headers: "Roboto", sans-serif;
+  --paragraph-font-family: "Roboto", serif;
+  --headers: "Rubik", sans-serif;
 }
 
 /*
