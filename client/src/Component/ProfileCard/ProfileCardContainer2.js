@@ -29,7 +29,7 @@ const ProfileCardContainer2 = props => {
         </div>
         <hr className="line" />
 
-        <ProfileCardBtn review="Under my wing, you will get your dream home in record time!" />
+        <ProfileCardBtn _id="5c2d7141afc4eb45bf524f7e" review="Under my wing, you will get your dream home in record time!" />
       </div>
     </div>
   );
