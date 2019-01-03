@@ -31,7 +31,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    if (window.localStorage.token) {
+    if (localStorage.token) {
       return this.setState({
         loggedIn: true
       });
@@ -81,6 +81,7 @@ class App extends Component {
         if (loggedInUser.user) {
           localStorage.setItem("loggedInUser", loggedInUser.user.firstname);
         } else {
+          localStorage.clear();
           return alert("Login Failed");
         }
 
@@ -100,6 +101,10 @@ class App extends Component {
       });
   };
 
+  logOutUser = () => {
+    return localStorage.token ? localStorage.clear() : null;
+  };
+
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -111,7 +116,7 @@ class App extends Component {
     return (
       <BrowserRouter className="App">
         <div>
-          <NavbarContainer loggedInUser={localStorage.loggedInUser || null} />
+          <NavbarContainer loggedInUser={localStorage.loggedInUser || null} logOutUser={this.logOutUser} />
           <Switch>
             <Route
               path="/"
