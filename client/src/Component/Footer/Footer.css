@@ -43,6 +43,7 @@
 .footer .footer__copyright {
   color: white;
   flex: 1;
+  font-size: 1.3rem;
 }
 
 .footer_logo {
