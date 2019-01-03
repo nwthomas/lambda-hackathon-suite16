@@ -24,6 +24,7 @@ class App extends Component {
       creds: "",
       cats: "",
       role: "",
+      dob: "",
       loggedIn: false,
       currentUserName: ""
     };
@@ -106,6 +107,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state)
     return (
       <BrowserRouter className="App">
         <div>
@@ -120,8 +122,8 @@ class App extends Component {
                     loggedinUser={localStorage.loggedInUser || null}
                   />
                 ) : (
-                  <Home />
-                )
+                    <Home />
+                  )
               }
               exact
             />
