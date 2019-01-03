@@ -77,7 +77,12 @@ class App extends Component {
       .then(res => res.json())
       .then(loggedInUser => {
         localStorage.setItem("token", loggedInUser.token);
-        localStorage.setItem("loggedInUser", loggedInUser.user.firstname);
+        if (loggedInUser.user) {
+          localStorage.setItem("loggedInUser", loggedInUser.user.firstname);
+        } else {
+          return alert("Login Failed");
+        }
+
         this.setState(
           {
             loggedInUser,
