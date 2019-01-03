@@ -1,10 +1,10 @@
 import React from "react";
 import Profile from "../Profile/Profile";
 
-const Dashboard = () => {
+const Dashboard = props => {
   return (
     <div>
-      <Profile />
+      <Profile _id={props._id} profiles={props.profiles}/>
     </div>
   );
 };

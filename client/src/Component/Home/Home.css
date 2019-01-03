@@ -2,7 +2,7 @@
 
 .home__container {
   width: 100%;
-  margin: 80px auto 0;
+  margin-top: 80px
 }
 
 .home__hero__container {
@@ -70,4 +70,28 @@
 
 .icon__container {
   width: 15%;
+}
+
+@media (max-width: 800px) {
+  .home__title {
+    left: 15%;
+    font-size: 2.8rem;
+    width: 70%;
+    height: 75px;
+    padding: 25px 1% 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home__container {
+    margin-top: 60px;
+  }
+
+  .home__title {
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    font-size: 2.4rem;
+    padding: 17.5px 1% 5px;
+  }
 }
