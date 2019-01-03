@@ -168,6 +168,11 @@ p {
   color: var(--paragraph-color);
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

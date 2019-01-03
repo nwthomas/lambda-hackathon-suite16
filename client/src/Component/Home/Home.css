@@ -1,0 +1,13 @@
+@import url("../../Styles/Variables.css");
+
+.home__container {
+  max-width: 1000px;
+  width: 100%;
+  height: 500px;
+  margin: 125px auto 0;
+}
+
+.money__img {
+  width: 50%;
+  margin: 0 auto;
+}
