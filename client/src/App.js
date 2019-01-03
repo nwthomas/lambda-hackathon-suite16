@@ -47,6 +47,11 @@ class App extends Component {
     setTimeout(function() {
       localStorage.clear();
     }, 100);
+    const script = document.createElement("script");
+    script.src =
+      "https://tokbox.com/embed/embed/ot-embed.js?embedId=9aad96ab-1297-4431-bd6a-b787c7cb14e0&room=DEFAULT_ROOM";
+    script.async = true;
+    document.body.appendChild(script);
   }
 
   addNewUser = e => {
