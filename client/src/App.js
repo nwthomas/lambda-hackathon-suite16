@@ -44,9 +44,6 @@ class App extends Component {
         loggedIn: true
       });
     }
-    setTimeout(function() {
-      localStorage.clear();
-    }, 100);
   }
 
   addNewUser = e => {
@@ -142,12 +139,11 @@ class App extends Component {
           <Switch>
             <Route
               path="/"
-              exact
               render={props =>
-                localStorage.loggedInUser ? (
+                localStorage.token ? (
                   <Dashboard
                     {...props}
-                    loggedinUser={localStorage.loggedInUser}
+                    loggedinUser={localStorage.loggedInUser || null}
                     _id={localStorage.loginId}
                     profiles={this.state.profiles}
                   />
@@ -155,6 +151,7 @@ class App extends Component {
                   <Home />
                 )
               }
+              exact
             />
             <Route
               path="/login"

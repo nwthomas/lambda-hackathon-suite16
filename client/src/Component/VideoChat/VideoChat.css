@@ -12,12 +12,4 @@
   -webkit-border-radius: 8px;
 }
 
-.video--display {
-  display: block;
-}
-
-.video--hidden {
-  display: none;
-}
-
 /* style={{ width: "1800px", height: "1440px" }} */
