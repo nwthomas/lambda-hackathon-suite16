@@ -24,7 +24,7 @@ class App extends Component {
       "creds": '',
       "cats": '',
       "role": '',
-      loggedIn: false
+      "loggedIn": false
     };
   }
 
@@ -32,11 +32,9 @@ class App extends Component {
     if (window.localStorage.token) {
       return this.setState({
         loggedIn: true
-      })
+      });
     }
   }
-
-
 
   addNewUser = e => {
     e.preventDefault();
@@ -90,7 +88,6 @@ class App extends Component {
             firstname={this.state.firstname}
             lastname={this.state.lastname}
             username={this.state.username}
-
           />
           <Switch>
             <Route path='/' render={() => (
@@ -132,7 +129,6 @@ class App extends Component {
 
               )} /> */}
           </Switch>
-
         </div>
       </BrowserRouter>
     );

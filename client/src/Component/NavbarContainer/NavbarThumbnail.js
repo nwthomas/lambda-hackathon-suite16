@@ -8,7 +8,7 @@ const NavbarThumbnail = props => {
       <div className="navbar__username__avatar">
         <img src={defaultPicture} alt="User thumbnail" />
       </div>
-      <a className="navbar__username__link" href="index.html">
+      <a className="navbar__username__link" href="/">
         {props.username}
       </a>
     </div>
