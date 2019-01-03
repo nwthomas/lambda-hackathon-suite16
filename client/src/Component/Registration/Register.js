@@ -177,29 +177,17 @@ const Register = props => {
           >
             Role list
           </span>
-          <input
-            className='register__form__field__text'
-            type='text'
-            name='cats'
-            placeholder='Select from a list of roles'
+          <select 
+            className="register__form__field__text" 
+            name='cats' 
             onChange={props.handleChange}
-          />
-        </div>
-        <div
-          className="register__form__field"
-        >
-          <span
-            className='register__form__field__label'
           >
-            Role input
-          </span>
-          <input
-            className='register__form__field__text'
-            type='text'
-            name='role'
-            placeholder='Provide a role input'
-            onChange={props.handleChange}
-          />
+            <option disabled selected value="">Select from a list of roles</option>
+            <option value='taxes'>Taxes</option>
+            <option value='investing'>Investing</option>
+            <option value='estate'>Estate Planning</option>
+            <option value='financial'>Financial Planning</option>
+          </select>
         </div>
         <button className="register__form__button" type='submit'>Register</button>
       </form>
