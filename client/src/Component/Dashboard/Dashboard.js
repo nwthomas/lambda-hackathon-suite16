@@ -7,7 +7,6 @@ const Dashboard = props => {
   return (
     <div>
       <Profile _id={props._id} profiles={props.profiles} />
-      <ProfileListsContainer _id={props._id} profiles={props.profiles} handleChange={props.handleChange} searchableProfiles={props.searchableProfiles} updateSearchableProfiles={props.updateSearchableProfiles} hasSetRole={props.hasSetRole}/>
       <form
         target="paypal"
         action="https://www.paypal.com/cgi-bin/webscr"
@@ -58,11 +57,7 @@ const Dashboard = props => {
           height="1"
         />
       </form>
-      <ProfileListsContainer
-        _id={props._id}
-        profiles={props.profiles}
-        stars={props.stars}
-      />
+      <ProfileListsContainer _id={props._id} profiles={props.profiles} handleChange={props.handleChange} searchableProfiles={props.searchableProfiles} updateSearchableProfiles={props.updateSearchableProfiles} hasSetRole={props.hasSetRole} stars={props.stars}/>
       <VideoChat />
     </div>
   );
