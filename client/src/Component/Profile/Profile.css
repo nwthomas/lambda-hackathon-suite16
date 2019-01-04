@@ -7,6 +7,13 @@
   margin: 150px auto 0;
 }
 
+.profile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
 .profile__heading {
   font-size: 3.2rem;
   font-weight: bold;
@@ -65,6 +72,12 @@
 }
 
 @media (max-width: 800px) {
+  .profile-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 150px 15px 0 15px;
+  }
+
   .profile__data {
     flex-direction: column;
   }
@@ -75,10 +88,13 @@
 }
 
 @media (max-width: 500px) {
+  .profile-top {
+    margin-bottom: 35px;
+  }
+
   .profile__heading {
     font-size: 3.2rem;
     font-weight: bold;
-    margin-bottom: 35px;
   }
 
   .profile__data__left__avatar {
@@ -87,8 +103,8 @@
   }
 
   .profile__data__left__avatar img {
-    width: 200px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
     object-fit: cover;
   }
 

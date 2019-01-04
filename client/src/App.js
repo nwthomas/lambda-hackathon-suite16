@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavbarContainer from "./Component/NavbarContainer/NavbarContainer";
 import "./App.css";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import Fuse from "fuse.js";
 import Home from "./Component/Home/Home";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
@@ -30,7 +31,10 @@ class App extends Component {
       specialty: "",
       dob: "",
       loggedIn: false,
-      currentUserName: ""
+      currentUserName: "",
+      searchableProfiles: [],
+      loggedInRole: "",
+      hasSetRole: ""
     };
   }
 
@@ -149,6 +153,33 @@ class App extends Component {
       this.setState({
         specialty: "N/A"
       });
+    } else if (e.target.name === "profile-searchbar") {
+      this.updateSearchableProfiles(e.target.value);
+    }
+  };
+
+  updateSearchableProfiles = target => {
+    if (!this.state.searchableProfiles.length && !this.state.hasSetRole) {
+      const profileArr = this.state.profiles.filter(profile => profile.role !== target);
+      this.setState({searchableProfiles: profileArr, loggedInRole: target, hasSetRole: true});
+    } else if (this.state.hasSetRole) {
+      if (!target.length) {
+        const profileArr = this.state.profiles.filter(profile => profile.role !== this.state.loggedInRole);
+        this.setState({searchableProfiles: profileArr});
+      } else {
+        const fuse = new Fuse(this.state.profiles, {
+          shouldSort: true,
+          threshold: 0.1,
+          minMatchCharLength: 1,
+          keys: [
+            "firstname",
+            "lastname",
+            "username"
+          ]
+        });
+        const profileArr = fuse.search(target).filter(profile => profile.role !== this.state.loggedInRole);
+        this.setState({searchableProfiles : profileArr});
+      }
     }
   };
 
@@ -171,6 +202,10 @@ class App extends Component {
                     loggedinUser={localStorage.loggedInUser || null}
                     _id={localStorage.loginId}
                     profiles={this.state.profiles}
+                    handleChange={this.handleChange}
+                    searchableProfiles={this.state.searchableProfiles}
+                    updateSearchableProfiles={this.updateSearchableProfiles}
+                    hasSetRole={this.state.hasSetRole}
                     stars={this.stars}
                   />
                 ) : (

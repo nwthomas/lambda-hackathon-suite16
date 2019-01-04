@@ -1,4 +1,27 @@
 @import url("../../Styles/Variables.css");
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.profile-lists__search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto 37.5px;
+}
+
+.profile-lists__search__label {
+  font-size: 2.4rem;
+  margin-right: 2%;
+}
+
+.profile-lists__search__input {
+  width: 40%;
+  height: 50px;
+  font-family: "FontAwesome";
+  font-size: 2rem;
+  padding: 0 1% 0 2%;
+  border-radius: 10px;
+}
 
 .profile-lists__container {
   height: 630px;
@@ -17,6 +40,10 @@
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
+}
+
+.dashboard__profile__container--hidden {
+  display: none;
 }
 
 .dashboard__avatar__photo {
@@ -107,4 +134,35 @@
 
 .profile__card__button {
   padding-top: 13px;
+}
+
+@media (max-width: 800px) {
+  .profile-lists__search__label {
+    font-size: 2rem;
+    margin-right: 2.25%;
+  }
+  
+  .profile-lists__search__input {
+    width: 45%;
+    height: 40px;
+    font-family: "FontAwesome";
+    font-size: 1.8rem;
+    padding: 0 1% 0 2%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-lists__search {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-lists__search__label {
+    margin: 0 0 20px 0;
+  }
+
+  .profile-lists__search__input {
+    width: 65%;
+  }
 }
