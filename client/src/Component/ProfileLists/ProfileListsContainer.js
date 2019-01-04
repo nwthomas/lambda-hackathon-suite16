@@ -14,17 +14,17 @@ const ProfileListsContainer = props => {
   //   return 1;
   // });
 
-
   // console.log(props.searchableProfiles);
 
   return !target ? (
     ""
   ) : (
-    
-/// Master
+    /// Master
     <React.Fragment>
       <div className="profile-lists__search">
-        <span className="profile-lists__search__label">{target.role === "advisee" ? "Search advisors:" : "Search advisees:"}</span>
+        <span className="profile-lists__search__label">
+          {target.role === "advisee" ? "Search advisors:" : "Search advisees:"}
+        </span>
         <input
           className="profile-lists__search__input"
           name="profile-searchbar"
@@ -43,7 +43,7 @@ const ProfileListsContainer = props => {
             specialty={card.specialty}
             rating={card.rating}
             _id={card._id}
-          stars={props.stars}
+            stars={props.stars}
           />
         ))}
       </div>
