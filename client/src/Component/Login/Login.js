@@ -10,20 +10,20 @@ const Login = props => {
         <div className="login__form__field">
           <span className="login__form__field__label">Username</span>
           <input
-            className='login__form__field__text'
-            type='text'
-            name='username'
-            placeholder='Enter your username'
+            className="login__form__field__text"
+            type="text"
+            name="username"
+            placeholder="Enter your username"
             onChange={props.handleChange}
           />
         </div>
         <div className="login__form__field">
           <span className="login__form__field__label">Password</span>
           <input
-            className='login__form__field__text'
-            type='password'
-            name='password'
-            placeholder='Enter your password'
+            className="login__form__field__text"
+            type="password"
+            name="password"
+            placeholder="Enter your password"
             onChange={props.handleChange}
           />
         </div>
