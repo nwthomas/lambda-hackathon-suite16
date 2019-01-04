@@ -7,6 +7,7 @@ const Dashboard = props => {
   return (
     <div>
       <Profile _id={props._id} profiles={props.profiles} />
+      <ProfileListsContainer _id={props._id} profiles={props.profiles} handleChange={props.handleChange} searchableProfiles={props.searchableProfiles} updateSearchableProfiles={props.updateSearchableProfiles} hasSetRole={props.hasSetRole}/>
       <form
         target="paypal"
         action="https://www.paypal.com/cgi-bin/webscr"
@@ -68,10 +69,3 @@ const Dashboard = props => {
 };
 
 export default Dashboard;
-
-// className={props.loggedinUser ? "video--display" : "display--hidden"}
-// name
-// specialty
-
-// rating
-// profileCat
