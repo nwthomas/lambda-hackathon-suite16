@@ -1,6 +1,5 @@
 import React from "react";
 import "./Rating.css";
-import { checkPropTypes } from "prop-types";
 
 const Rating = props => {
   return (
@@ -13,7 +12,7 @@ const Rating = props => {
           value="5"
           onClick={e => props.stars(e, props._id)}
         />
-        <label for="5-stars" className="star">
+        <label htmlFor="5-stars" className="star">
           &#9733;
         </label>
         <input
@@ -26,7 +25,7 @@ const Rating = props => {
             props.stars(e, props._id);
           }}
         />
-        <label for="4-stars" className="star">
+        <label htmlFor="4-stars" className="star">
           &#9733;
         </label>
         <input
@@ -36,7 +35,7 @@ const Rating = props => {
           value="3"
           onClick={e => props.stars(e, props._id)}
         />
-        <label for="3-stars" className="star">
+        <label htmlFor="3-stars" className="star">
           &#9733;
         </label>
         <input
@@ -46,7 +45,7 @@ const Rating = props => {
           value="2"
           onClick={e => props.stars(e, props._id)}
         />
-        <label for="2-stars" className="star">
+        <label htmlFor="2-stars" className="star">
           &#9733;
         </label>
         <input
@@ -56,7 +55,7 @@ const Rating = props => {
           value="1"
           onClick={e => props.stars(e, props._id)}
         />
-        <label for="1-star" className="star">
+        <label htmlFor="1-star" className="star">
           &#9733;
         </label>
       </div>

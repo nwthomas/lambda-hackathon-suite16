@@ -1,0 +1,23 @@
+.payment__form {
+  text-align: center;
+}
+
+.payment__form table {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.payment__form table td {
+  padding: 20px;
+  width: 100%;
+}
+
+.payment__form table td select {
+  padding: 10px 20px;
+  background: none;
+}
+
+.title__content {
+  background: var(--navbar--bg);
+  color: var(--navbar-color);
+}
