@@ -57,6 +57,9 @@
   -moz-border-top-left-radius: 15px;
   -webkit-border-top-right-radius: 15px;
   -webkit-border-top-left-radius: 15px;
+  z-index: -1;
+  max-height: 349px;
+  height: 100%;
 }
 
 .dashboard__name__rating {
@@ -141,7 +144,7 @@
     font-size: 2rem;
     margin-right: 2.25%;
   }
-  
+
   .profile-lists__search__input {
     width: 45%;
     height: 40px;

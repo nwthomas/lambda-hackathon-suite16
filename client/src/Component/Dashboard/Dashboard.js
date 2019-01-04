@@ -57,7 +57,15 @@ const Dashboard = props => {
           height="1"
         /> */}
       </form>
-      <ProfileListsContainer _id={props._id} profiles={props.profiles} handleChange={props.handleChange} searchableProfiles={props.searchableProfiles} updateSearchableProfiles={props.updateSearchableProfiles} hasSetRole={props.hasSetRole} stars={props.stars}/>
+      <ProfileListsContainer
+        _id={props._id}
+        profiles={props.profiles}
+        handleChange={props.handleChange}
+        searchableProfiles={props.searchableProfiles}
+        updateSearchableProfiles={props.updateSearchableProfiles}
+        hasSetRole={props.hasSetRole}
+        stars={props.stars}
+      />
       <VideoChat />
     </div>
   );
