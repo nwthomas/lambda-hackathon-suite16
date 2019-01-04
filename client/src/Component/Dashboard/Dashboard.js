@@ -17,31 +17,33 @@ const Dashboard = props => {
           <input type="hidden" name="cmd" value="_s-xclick" />
           <input type="hidden" name="hosted_button_id" value="QP9XEXR4X7PZN" />
           <table>
-            <tr>
-              <td className="title__content">
-                <input
-                  type="hidden"
-                  name="on0"
-                  value="Suite 16 Financial Packages"
-                />
-                Suite 16 Financial Packages
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <select name="os0">
-                  <option value="1 X 1 on 1 Consultation">
-                    1 X 1 on 1 Consultation $125.99 USD
-                  </option>
-                  <option value="2 X 1 on 1 Consultation">
-                    2 X 1 on 1 Consultation $210.99 USD
-                  </option>
-                  <option value="4 X 1 on 1 Consultation">
-                    4 X 1 on 1 Consultation $329.99 USD
-                  </option>
-                </select>{" "}
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td className="title__content">
+                  <input
+                    type="hidden"
+                    name="on0"
+                    value="Suite 16 Financial Packages"
+                  />
+                  Suite 16 Financial Packages
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select name="os0">
+                    <option value="1 X 1 on 1 Consultation">
+                      1 X 1 on 1 Consultation $125.99 USD
+                    </option>
+                    <option value="2 X 1 on 1 Consultation">
+                      2 X 1 on 1 Consultation $210.99 USD
+                    </option>
+                    <option value="4 X 1 on 1 Consultation">
+                      4 X 1 on 1 Consultation $329.99 USD
+                    </option>
+                  </select>{" "}
+                </td>
+              </tr>
+            </tbody>
           </table>
           <input type="hidden" name="currency_code" value="USD" />
           <input

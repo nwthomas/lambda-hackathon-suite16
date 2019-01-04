@@ -5,7 +5,7 @@ import { checkPropTypes } from "prop-types";
 const Rating = props => {
   return (
     <div>
-      <div class="star-rating">
+      <div className="star-rating">
         <input
           type="radio"
           id="5-stars"
@@ -13,7 +13,7 @@ const Rating = props => {
           value="5"
           onClick={() => props.stars(5, props._id)}
         />
-        <label for="5-stars" class="star">
+        <label htmlFor="5-stars" className="star">
           &#9733;
         </label>
         <input
@@ -23,7 +23,7 @@ const Rating = props => {
           value="4"
           onClick={() => props.stars(4, props._id)}
         />
-        <label for="4-stars" class="star">
+        <label htmlFor="4-stars" className="star">
           &#9733;
         </label>
         <input
@@ -33,7 +33,7 @@ const Rating = props => {
           value="3"
           onClick={() => props.stars(3, props._id)}
         />
-        <label for="3-stars" class="star">
+        <label htmlFor="3-stars" className="star">
           &#9733;
         </label>
         <input
@@ -43,7 +43,7 @@ const Rating = props => {
           value="2"
           onClick={() => props.stars(2, props._id)}
         />
-        <label for="2-stars" class="star">
+        <label htmlFor="2-stars" className="star">
           &#9733;
         </label>
         <input
@@ -53,7 +53,7 @@ const Rating = props => {
           value="1"
           onClick={() => props.stars(1, props._id)}
         />
-        <label for="1-star" class="star">
+        <label htmlFor="1-star" className="star">
           &#9733;
         </label>
       </div>
