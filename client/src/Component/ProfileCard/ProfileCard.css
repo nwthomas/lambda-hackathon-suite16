@@ -1,12 +1,12 @@
 .profile__card__avatar {
-  width: 100%;
-  padding: 0px;
-  border-radius: 0%;
+  width: 155px;
+  height: 105px;
+  border-radius: 10%;
   max-width: 100%;
-
+  width: 100%;
   height: auto;
-  border-top-left-radius: 05%;
-  border-top-right-radius: 05%;
+  border-radius: 10%;
+  max-width: 100%;
 }
 .section__div {
   display: inline-block;
@@ -18,7 +18,7 @@
   display: grid;
   border: 3.5px solid #b79fab;
   width: 100%;
-  padding: 0px;
+  padding: 20px;
   opacity: 0.9;
   border-radius: 20px;
   max-width: 100%;
@@ -69,15 +69,15 @@
 }
 
 .profile__button__container {
-  margin-top: 0px;
+  margin-top: 10px;
   display: grid;
   justify-self: center;
-  align-self: center;
 }
 
 .profile__card__review {
+  height: 100%;
   font-size: 1.5rem;
-  width: 140px;
+  width: 130px;
   grid-column: 1/2;
   grid-row: 1/2;
   line-height: 2rem;
@@ -88,7 +88,6 @@
   text-align: center;
   justify-self: center;
   align-self: center;
-  padding-bottom: 2px;
 }
 .button__section {
   grid-column: 2/3;
@@ -97,13 +96,10 @@
   max-width: 100%;
   padding-left: 10%;
   justify-self: center;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
 }
 
 .big__section__div {
   width: 100%;
-
   background: #d7cad1;
   justify-self: center;
   display: grid;
@@ -112,7 +108,7 @@
 
 .line {
   width: 100%;
-  margin-top: 0px;
+  margin-top: 10px;
   max-width: 100%;
   height: 0px;
 }
@@ -131,7 +127,7 @@
 .profile__card__container {
   border: 3.5px solid #b79fab;
   width: 100%;
-  padding: 0px;
+  padding: 20px;
   opacity: 0.9;
   border-radius: 20px;
   max-width: 100%;
@@ -139,8 +135,7 @@
 
 .big__section__div {
   display: grid;
-  border-bottom-right-radius: 0%;
-  border-bottom-left-radius: 0%;
+  border-radius: 10%;
   padding-bottom: 0%;
   width: 100%;
 }
@@ -153,8 +148,8 @@
 
 .profile__card__button {
   height: 40px;
-  width: 90px;
-
+  width: 120px;
+  width: 100%;
   border: none;
   border-radius: 8px;
   -moz-border-radius: 8px;
@@ -162,7 +157,7 @@
   font-size: 1.4rem;
   background: var(--navbar-btn-bg);
   color: var(--navbar-btn-color);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: var(--headers);
   cursor: pointer;
   max-width: 100%;
@@ -189,181 +184,121 @@
   width: 100%;
   height: auto;
 }
-.profile__card__avatar {
-  width: 100%;
+
+@media (max-width: 800px) {
+  .profile__card__container {
+    padding: 10px;
+  }
+
+  .profile__card__title p {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+
+  .profile__card__button {
+    height: 30px;
+    width: 100px;
+    font-size: 1.2rem;
+  }
+  .profile__card__review {
+    font-size: 1.2rem;
+    width: 90px;
+  }
 }
-@media (max-width: 827px) {
-  .profile__card__avatar {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+
+@media (max-width: 700px) {
+  .profile__card__container {
+    padding: 10px;
+  }
+  .star {
+    font-size: 18px;
   }
   .big__section__div {
     width: 100%;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
   }
-  .button__section {
-    width: 60px;
-    align-self: center;
+  .profile__card__review {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .profile__card__button {
     font-size: 1rem;
-    height: 25px;
+    height: 30px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile__card__container {
+    padding: 2px;
   }
   .star {
-    font-size: 15px;
+    font-size: 8px;
+    justify-content: center;
   }
-  .profile__card__title p {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 800;
-    line-height: 2rem;
-    max-width: 100%;
+  .big__section__div {
+    width: 100%;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
   .profile__card__review {
-    font-size: 1.1rem;
-    width: 100px;
-    line-height: 1.8rem;
-    height: auto;
-    padding-bottom: 3px;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    width: 90px;
+    padding-left: 0px;
+    margin-left: 0px;
   }
 
-  .profile__card__container {
-    padding: 0px;
+  .profile__card__button {
+    font-size: 0.7rem;
+    height: 27px;
+    width: 55px;
   }
-  .star {
-    padding-bottom: 3px;
-    line-height: 8px;
+  .profile__card__title p {
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
+
   .profile__button__container {
     margin-top: 0px;
-    padding-right: 2px;
-    padding-left: 2px;
-    padding-bottom: 3px;
-    display: grid;
-    justify-self: center;
-    justify-content: center;
-    align-self: center;
+    width: 130px;
   }
   .message__button {
     margin-top: 5px;
   }
-}
-
-@media (max-width: 550px) {
-  .big__section__div {
-    width: 100%;
-  }
-  .main__profile__wrapper {
-    justify-self: center;
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .main__profile__wrapper1 {
-    justify-self: center;
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .main__profile__wrapper2 {
-    justify-self: center;
-    grid-column: 1/2;
-    grid-row: 3/4;
-    width: 100%;
-  }
-
-  .profile__card__button {
-    height: 40px;
-    width: 108px;
-    font-size: 1.5rem;
-  }
   .button__section {
-    width: 120px;
-    padding-bottom: 10px;
-    justify-self: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 50px;
   }
-
-  .profile__card__review {
-    font-size: 1.6rem;
-    width: 200px;
-    line-height: 2.4rem;
+  .parent__profile {
+    margin: 0;
+    grid-gap: 1%;
   }
-  .profile__card__title p {
-    font-size: 2rem;
+  .line {
+    margin: 0px;
   }
   .star {
-    font-size: 17px;
-    line-height: 1.5rem;
-    padding-bottom: 5px;
-  }
-  .profile__card__title p {
-    line-height: 3.3rem;
-  }
-  .big__section__div {
-    width: 100%;
-    height: auto;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  .profile__card__avatar {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  .profile__card__container {
-    padding: 0px;
-  }
-  .profile__button__container {
-    padding: 10px;
-  }
-}
-@media (max-width: 455px) {
-  .profile__card__container {
-    justify-self: center;
-    width: 230px;
-  }
-  .profile__card__review {
-    padding: 6px;
-    width: 120px;
-    font-size: 1.5rem;
-    justify-self: center;
-    align-self: center;
-  }
-  .button__section {
-    align-self: center;
-    justify-self: flex-start;
-    width: 70px;
-    padding: 3px;
-  }
-  .big__section__div {
-    width: 100%;
-
-    justify-self: center;
-  }
-  .profile__card__avatar div {
-    width: 100%;
-    justify-self: center;
+    padding-bottom: 0px;
   }
   .section__div {
-    justify-self: center;
-    width: 100%;
+    line-height: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .profile__card__button {
+    height: 25px;
+    width: 55px;
   }
   .profile__button__container {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
+    margin-top: 0px;
+    width: 130px;
   }
-  .profile__card__title p {
-    font-size: 1.8rem;
-    line-height: 2.4rem;
+  .message__button {
+    margin-top: 12px;
   }
-  .star {
-    line-height: 2px;
-    padding-top: 4px;
-  }
-  .profile__card__button {
-    font-size: 1.2rem;
-    height: 30px;
-    width: 150px;
+
+  .profile__card__review {
+    padding-left: 1px;
+    width: 70px;
   }
 }
