@@ -21,6 +21,11 @@
   --register-btn-border-hover: var(--strikemaster);
   --home-headline-color: var(--white);
   --profile-card: var(--dusty-gray);
+  --user-edit-btn-bg: var(--strikemaster);
+  --user-edit-btn-color: var(--white);
+  --user-edit-btn-bg-hover: var(--white);
+  --user-edit-btn-color-hover: var(--strikemaster);
+  --user-edit-btn-border-hover: var(--strikemaster);
 }
 
 /*--- Color Values ---*/

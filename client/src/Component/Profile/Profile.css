@@ -4,20 +4,21 @@
 .profile-container {
   width: 100%;
   max-width: 1200px;
-  margin: 150px auto 0;
-}
-
-.profile-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
+  margin: 150px auto 10px;
 }
 
 .profile__heading {
   font-size: 3.2rem;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+.profile__edit-link {
+  display: block;
+  font-size: 2.4rem;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  margin-bottom: 75px;
 }
 
 .profile__data {
