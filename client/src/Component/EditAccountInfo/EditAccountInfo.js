@@ -2,13 +2,13 @@ import React from "react";
 import "./EditAccountInfo.css";
 
 const EditAccountInfo = props => {
-  const currentUser = props.profiles.filter(profile => profile._id === props._id)[0];
+  const currentUser = props.profiles.filter(profile => profile._id === props._id)[0] || null;
 
   return !currentUser ? (
     ""
   ) :  (
     <div className="user-edit__container">
-      <form className="user-edit__form" onSubmit={props.editUser}>
+      <form className="user-edit__form" onSubmit={e => props.editUser(e, currentUser)}>
         <h2 className="user-edit__form__heading">Edit User Details ({currentUser.username})</h2>
         <div className="user-edit__form__field">
           <span className="user-edit__form__field__label">First Name</span>
@@ -16,8 +16,7 @@ const EditAccountInfo = props => {
             className="user-edit__form__field__text"
             type="text"
             name="firstname"
-            value={currentUser.firstname}
-            placeholder="Enter your first name"
+            placeholder={`Enter your first name (current: ${currentUser.firstname})`}
             onChange={props.handleChange}
             required
           />
@@ -28,8 +27,7 @@ const EditAccountInfo = props => {
             className="user-edit__form__field__text"
             type="text"
             name="lastname"
-            value={currentUser.lastname}
-            placeholder="Enter your last name"
+            placeholder={`Enter your last name (current: ${currentUser.lastname})`}
             onChange={props.handleChange}
             required
           />
@@ -40,7 +38,6 @@ const EditAccountInfo = props => {
             className="user-edit__form__field__text"
             type="password"
             name="password"
-            value={currentUser.password}
             placeholder="Enter a secure password"
             onChange={props.handleChange}
             required
@@ -52,8 +49,7 @@ const EditAccountInfo = props => {
             className="user-edit__form__field__text"
             type="email"
             name="email"
-            value={currentUser.email}
-            placeholder="Enter your email address"
+            placeholder={`Enter your email address (current: ${currentUser.email})`}
             onChange={props.handleChange}
             required
           />
@@ -64,22 +60,7 @@ const EditAccountInfo = props => {
             className="user-edit__form__field__text"
             type="text"
             name="avatar"
-            value={currentUser.avatar}
-            placeholder="Enter a URL for your avatar photo"
-            onChange={props.handleChange}
-            required
-          />
-        </div>
-        <div className="user-edit__form__field">
-          <span className="user-edit__form__field__label">Date Of Birth</span>
-          <input
-            className="user-edit__form__field__text"
-            type="date"
-            name="dob"
-            min="1940-01-01"
-            max="2019-01-02"
-            value={currentUser.dob}
-            placeholder="Enter your date of birth"
+            placeholder={`Enter a URL for your avatar photo (current: ${currentUser.avatar})`}
             onChange={props.handleChange}
             required
           />
@@ -90,8 +71,7 @@ const EditAccountInfo = props => {
             className="user-edit__form__field__text"
             type="text"
             name="location"
-            value={currentUser.location}
-            placeholder="Enter your location"
+            placeholder={`Enter your location (current: ${currentUser.location})`}
             onChange={props.handleChange}
             required
           />
@@ -102,53 +82,10 @@ const EditAccountInfo = props => {
             className="user-edit__form__field__text"
             type="text"
             name="creds"
-            value={currentUser.creds}
-            placeholder="Enter your credentials"
+            placeholder={`Enter your credentials (current: ${currentUser.creds})`}
             onChange={props.handleChange}
             required
           />
-        </div>
-        <div className="user-edit__form__field">
-          <span className="user-edit__form__field__label">Role list</span>
-          <select
-            className="user-edit__form__field__text"
-            name="role"
-            value={currentUser.role}
-            onChange={props.handleChange}
-            required
-          >
-            <option disabled value="">
-              Select a role
-            </option>
-            <option value="advisee">I want to be an advisee</option>
-            <option value="advisor">I want to be an advisor</option>
-          </select>
-        </div>
-        <div
-          className={
-            currentUser.role === "advisor"
-              ? "user-edit__form__field"
-              : "user-edit__form__field--hidden"
-          }
-        >
-          <span className="user-edit__form__field__label">
-            Advisor specialty
-          </span>
-          <select
-            className="user-edit__form__field__text"
-            name="specialty"
-            value={currentUser.specialty}
-            onChange={props.handleChange}
-            required={props.selectedRole === "advisor"}
-          >
-            <option disabled selected value="">
-              Select a finance topic that you specialize in
-            </option>
-            <option value="taxes">Taxes</option>
-            <option value="investing">Investing</option>
-            <option value="estate">Estate Planning</option>
-            <option value="financial">Financial Planning</option>
-          </select>
         </div>
         <button className="user-edit__form__button" type="submit">
           Save Changes
