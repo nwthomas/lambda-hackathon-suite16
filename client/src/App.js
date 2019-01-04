@@ -91,7 +91,6 @@ class App extends Component {
   };
 
   editUser = (e, currentUser) => {
-    alert("current user: " + JSON.stringify(currentUser))
     this.setState({
       _id: currentUser._id,
       username: currentUser.username,
@@ -99,7 +98,6 @@ class App extends Component {
       role: currentUser.role,
       specialty: currentUser.specialty
     }, () => {
-      alert(JSON.stringify(this.state));
       e.preventDefault();
       fetch("https://comptagroup.com/api/updateprofile", {
         method: "POST",
