@@ -1,7 +1,89 @@
+@import url("../../Styles/Variables.css");
+
 .profile-lists__container {
-  height: 500px;
+  height: 630px;
   width: 100%;
   max-width: 1200px;
   margin: 10px auto 40px;
-  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard__profile__container {
+  max-width: 30%;
+  width: 100%;
+  margin: 10px 1%;
+  border: 3.5px solid var(--profile-card);
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+
+.dashboard__avatar__photo {
+  width: 100%;
+}
+
+.dashboard__avatar__photo img {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  -moz-border-top-right-radius: 15px;
+  -moz-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-top-left-radius: 15px;
+}
+
+.dashboard__name__rating {
+  background: var(--lola);
+  height: 120px;
+  width: 100%;
+  margin: -1px 0 0;
+}
+
+.dashboard__name {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.dashboard__speciality {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.dashboard__rating {
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.dashboard__card__bottom {
+  display: flex;
+}
+
+.dashboard__card__quotes {
+  width: 57%;
+}
+
+.dashboard__card__quotes {
+  padding: 20px 5% 0;
+  font-size: 1.8rem;
+  display: flex;
+  text-align: center;
+}
+
+.dashboard__card__buttons {
+  margin-top: 22px;
+  padding-left: 12px;
+  border-left: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.profile__card__button {
+  padding-top: 13px;
 }
