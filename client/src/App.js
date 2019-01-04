@@ -7,7 +7,7 @@ import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
 import Footer from "./Component/Footer/Footer";
-import Profile from "./Component/Profile/Profile";
+import Records from './Component/Records/Records'
 
 class App extends Component {
   constructor() {
@@ -187,6 +187,10 @@ class App extends Component {
                   selectedRole={this.state.role}
                 />
               )}
+            />
+             <Route
+              path="/records"
+              component={Records}
             />
             {/* <Route path='/dashboard'
 
