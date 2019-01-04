@@ -42,6 +42,10 @@
   -webkit-border-radius: 20px;
 }
 
+.dashboard__profile__container--hidden {
+  display: none;
+}
+
 .dashboard__avatar__photo {
   width: 100%;
 }
