@@ -169,6 +169,7 @@ class App extends Component {
         const fuse = new Fuse(this.state.profiles, {
           shouldSort: true,
           threshold: 0.1,
+          location: 0,
           minMatchCharLength: 1,
           keys: [
             "firstname",

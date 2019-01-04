@@ -13,7 +13,6 @@
   max-width: 1800px;
   margin: 0 auto;
   width: 100%;
-  /* border: 1px solid white; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -79,15 +78,22 @@
   .footer__container {
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-left: 5%;
   }
 
   .footer__container .section {
-    width: 200px;
+    width: 225px;
+    margin-right: 5%;
   }
 
   .footer__container .section2 {
     padding-left: 0;
     border: 0;
+  }
+
+  .footer__container .section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
   }
   .footer__copyright__right {
     padding-right: 0;

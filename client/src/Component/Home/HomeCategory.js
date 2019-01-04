@@ -6,7 +6,7 @@ import moneyBill from "../../Images/money-bill.svg";
 import "./Home.css";
 const HomeCategory = props => {
   return (
-    <div className="icon__wrapper">
+    
       <div className="icon__container">
         <div className="icon__item item__a">
           <img src={chart} className="category__icon" alt="icon" />
@@ -36,7 +36,7 @@ const HomeCategory = props => {
           </h2>
         </div>
       </div>
-    </div>
+    
   );
 };
 
