@@ -7,7 +7,7 @@ const Dashboard = props => {
   return (
     <div>
       <Profile _id={props._id} profiles={props.profiles} />
-      <ProfileListsContainer profiles={props.profiles} />
+      <ProfileListsContainer _id={props._id} profiles={props.profiles} />
       <VideoChat />
     </div>
   );
