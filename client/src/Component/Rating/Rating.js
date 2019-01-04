@@ -1,6 +1,5 @@
 import React from "react";
 import "./Rating.css";
-import { checkPropTypes } from "prop-types";
 
 const Rating = props => {
   return (

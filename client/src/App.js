@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavbarContainer from "./Component/NavbarContainer/NavbarContainer";
 import "./App.css";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Fuse from "fuse.js";
 import Home from "./Component/Home/Home";
 import Login from "./Component/Login/Login";

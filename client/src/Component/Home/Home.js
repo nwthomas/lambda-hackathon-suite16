@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Home.css";
 import homeHeader from "../../Images/home-header.jpg";
 import HomeCategory from "./HomeCategory";
@@ -10,7 +9,7 @@ import ProfileCardContainer2 from "../ProfileCard/ProfileCardContainer2";
 const Home = () => {
   return (
     <div className="home__container">
-      {/* <NavLink to='/register'>register</NavLink> 
+      {/* <NavLink to='/register'>register</NavLink>
       <NavLink to='/login'>login</NavLink> */}
       <div className="home__hero__container">
         <img src={homeHeader} alt="" />
