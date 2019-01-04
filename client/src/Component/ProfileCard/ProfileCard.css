@@ -154,7 +154,7 @@
 .profile__card__button {
   height: 40px;
   width: 90px;
-
+  padding-top: 0px;
   border: none;
   border-radius: 8px;
   -moz-border-radius: 8px;
@@ -192,6 +192,12 @@
 .profile__card__avatar {
   width: 100%;
 }
+.message__button {
+  padding-top: 0px;
+}
+.profile__button__container .button__section .profile__card__button {
+  padding-top: 0px;
+}
 @media (max-width: 827px) {
   .profile__card__avatar {
     border-top-left-radius: 15px;
@@ -209,6 +215,9 @@
   .profile__card__button {
     font-size: 1rem;
     height: 25px;
+    padding: 0%;
+    line-height: 1rem;
+    width: 100%;
   }
   .star {
     font-size: 15px;
@@ -247,6 +256,8 @@
   }
   .message__button {
     margin-top: 5px;
+    align-self: center;
+    justify-self: center;
   }
 }
 
@@ -340,7 +351,7 @@
       padding: 3px;
     }
     .message__button {
-      margin-top: 15px;
+      margin-top: 1px;
     }
     .big__section__div {
       width: 100%;

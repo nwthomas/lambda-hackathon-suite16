@@ -8,10 +8,8 @@ const ProfileCardBtn = props => {
       <p className="profile__card__review">{props.review}</p>
 
       <div className="button__section">
-        <NavLink
-          to="/profile"
-        >
-          <button className="profile__button profile__card__button">
+        <NavLink to="/profile">
+          <button className="profile__button profile__card__button profilelist__card__button">
             Go To Profile
           </button>
         </NavLink>

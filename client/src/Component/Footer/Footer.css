@@ -1,9 +1,7 @@
 .footer {
-  width: 100%;
-
-  background-color: #8e697b;
+  background-color: black;
   bottom: 0;
-  height: 100%;
+  height: 140px;
   display: grid;
 
   margin: 0 auto;
@@ -19,8 +17,8 @@
 
 .footer__container {
   display: grid;
-  align-content: baseline;
-  justify-content: center;
+  align-content: center;
+  justify-content: space-evenly;
 }
 
 .footer__container .section {
@@ -32,10 +30,9 @@
   align-self: center;
   justify-self: center;
   grid-column-gap: 20%;
-  border: 2px solid white;
-  width: 180px;
-  height: 80px;
+  line-height: 2.9rem;
   align-content: space-around;
+  height: 100%;
 }
 
 .footer__container .section p {
@@ -47,7 +44,7 @@
 }
 
 .footer__container .section h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: bold;
   align-self: center;
   justify-self: center;
@@ -56,6 +53,7 @@
 .footer__container .section p {
   justify-self: center;
   text-decoration: underline;
+  font-size: 1.5rem;
 }
 .footer__copyright {
   color: white;
@@ -68,7 +66,7 @@
 .footer_logo {
   align-self: center;
   justify-self: center;
-  width: 65px;
+  width: 100%;
 }
 .dad__foot {
   justify-self: center;
@@ -90,126 +88,99 @@
 }
 .footer__container .footer__copyright__right {
   display: grid;
-  border: 2px solid white;
-  width: 180px;
-  height: 80px;
+
+  height: 100%;
   grid-column: 4/5;
   grid-row: 1/2;
-  line-height: 0%;
+  line-height: 2.5rem;
   align-self: center;
   align-content: space-around;
 }
 
 @media (max-width: 722px) {
+  .footer {
+    height: 400px;
+    width: 722px;
+    width: 100%;
+    max-width: 100%;
+  }
   .footer__container .section1 {
     grid-column: 1/2;
     grid-row: 1/2;
-  }
-  .footer__container .section2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .footer__container .section3 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .footer__container .footer__copyright__right {
+    height: 200px;
+    border: 2px solid white;
     width: 280px;
-    height: 130px;
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  .footer_logo {
-    align-self: center;
-    justify-self: center;
-    width: 120px;
-  }
-  .footer__container .section {
-    width: 280px;
-    height: 130px;
-  }
-  .footer__container .section p {
-    line-height: 2.5rem;
-    color: white;
-    font-size: 1.9rem;
-    font-weight: bold;
+    border-left: none;
+    border-top: none;
     max-width: 100%;
   }
-
-  .footer__container .section h2 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    align-self: center;
-    justify-self: center;
+  .footer__container .section2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 200px;
+    border: 2px solid white;
+    width: 280px;
+    border-right: none;
+    border-top: none;
+    max-width: 100%;
+  }
+  .footer__container .section3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 200px;
+    border: 2px solid white;
+    width: 280px;
+    border-left: none;
+    border-bottom: none;
+    max-width: 100%;
+  }
+  .footer__container .footer__copyright__right {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 200px;
+    border: 2px solid white;
+    width: 280px;
+    border-right: none;
+    border-bottom: none;
+    max-width: 100%;
+  }
+  .footer_logo {
+    width: 100px;
+  }
+  .footer__container .section {
+    grid-column-gap: 0px;
+  }
+  .footer__container {
+    justify-content: center;
     max-width: 100%;
   }
 }
 
-@media (max-width: 568px) {
-  .footer__container {
-    bottom: 0;
-    margin: auto;
+@media (max-width: 550px) {
+  .footer {
+    height: 100%;
   }
   .footer__container .footer__copyright__right {
-    bottom: 0;
-    max-width: 100%;
-    width: 100%;
-    border: 1px solid white;
     grid-column: 1/-1;
     grid-row: 1/2;
-    margin: mar;
+    border: none;
+    border-bottom: 1px solid white;
   }
   .footer__container .section1 {
     grid-column: 1/-1;
     grid-row: 2/3;
-    bottom: 0;
-    max-width: 100%;
-    width: 100%;
-    border: 1px solid white;
+    border: none;
+    border-bottom: 1px solid white;
   }
   .footer__container .section2 {
     grid-column: 1/-1;
     grid-row: 3/4;
-    bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    border: 1 px solid;
+    border: none;
+    border-bottom: 1px solid white;
   }
   .footer__container .section3 {
     grid-column: 1/-1;
     grid-row: 4/5;
-    bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    border: 1px solid white;
-  }
-  .footer_logo {
-    align-self: center;
-    justify-self: center;
-    width: 100%;
-  }
-  .footer__container .section {
-    width: 100%;
-    max-width: 100%;
-    border: 1 px solid white;
-    line-height: 2rem;
-  }
-  .footer__container .section p {
-    line-height: 1rem;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    max-width: 100%;
-  }
-
-  .footer__container .section h2 {
-    font-size: 1.2rem;
-  }
-  .footer__copyright {
-    color: white;
-    align-self: center;
-    justify-self: center;
-    font-size: 1rem;
-    font-weight: bold;
+    border: none;
   }
 }
