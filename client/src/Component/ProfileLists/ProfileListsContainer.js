@@ -17,9 +17,12 @@ const ProfileListsContainer = props => {
         <ProfileListCard
           key={"card" + index}
           avatar={card.avatar}
+          role={card.role}
           firstname={card.firstname}
           specialty={card.specialty}
           rating={card.rating}
+          _id={card._id}
+          stars={props.stars}
         />
       ))}
     </div>

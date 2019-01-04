@@ -7,7 +7,7 @@ import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
 import Footer from "./Component/Footer/Footer";
-import Records from './Component/Records/Records'
+import Records from "./Component/Records/Records";
 
 class App extends Component {
   constructor() {
@@ -45,6 +45,18 @@ class App extends Component {
       });
     }
   }
+
+  stars = (rating, id) => {
+    fetch(`https://comptagroup.com/api/rating/${id}/${rating}`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(data => console.log(data));
+  };
 
   addNewUser = e => {
     e.preventDefault();
@@ -158,6 +170,7 @@ class App extends Component {
                     loggedinUser={localStorage.loggedInUser || null}
                     _id={localStorage.loginId}
                     profiles={this.state.profiles}
+                    stars={this.stars}
                   />
                 ) : (
                   <Home />
@@ -188,10 +201,7 @@ class App extends Component {
                 />
               )}
             />
-             <Route
-              path="/records"
-              component={Records}
-            />
+            <Route path="/records" component={Records} />
             {/* <Route path='/dashboard'
 
               render={props => (

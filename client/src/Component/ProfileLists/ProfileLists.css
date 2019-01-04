@@ -39,6 +39,15 @@
   margin: -1px 0 0;
 }
 
+.dashboard__name__rating p {
+  line-height: 0.8rem;
+}
+
+.dashboard__rating__num {
+  padding-top: 10px;
+  font-size: 2rem;
+}
+
 .dashboard__name {
   width: 100%;
   text-align: center;
@@ -53,6 +62,18 @@
   padding-top: 20px;
   font-size: 1.8rem;
   font-weight: 900;
+}
+
+.rating__container {
+  margin-top: 10px;
+  background-color: white;
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard__rating__star {
+  padding: 0;
 }
 
 .dashboard__rating {

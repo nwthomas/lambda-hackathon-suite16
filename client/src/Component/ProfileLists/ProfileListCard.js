@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProfileLists.css";
+import Rating from "../Rating/Rating";
 
 const ProfileListCard = props => {
   return (
@@ -11,7 +12,21 @@ const ProfileListCard = props => {
         <div className="dashboard__name__rating">
           <p className="dashboard__name">{props.firstname}</p>
           <p className="dashboard__speciality">{props.specialty}</p>
-          <div className="dashboard__rating">Insert Rating</div>
+
+          {props.role !== "advisee" ? (
+            <div className="dashboard__rating">
+              <p className="dashboard__rating__num">Rating: {props.rating}</p>
+            </div>
+          ) : null}
+          {props.role !== "advisee" ? (
+            <div className="rating__container">
+              <Rating
+                className="dashboard__rating__star"
+                _id={props._id}
+                stars={props.stars}
+              />
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="dashboard__card__bottom">
