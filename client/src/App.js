@@ -17,7 +17,6 @@ class App extends Component {
     this.state = {
       loginVerified: false,
       data: [],
-      profiles: [],
       loggedInUser: [],
       firstname: "",
       lastname: "",
@@ -33,6 +32,7 @@ class App extends Component {
       dob: "",
       loggedIn: false,
       currentUserName: "",
+      profiles: [],
       searchableProfiles: [],
       loggedInRole: "",
       hasSetRole: ""
@@ -52,7 +52,6 @@ class App extends Component {
   }
 
   stars = (e, id) => {
-    
     fetch(`https://comptagroup.com/api/rating/${id}/${e.target.value}`, {
       method: "POST",
       headers: {
@@ -84,15 +83,49 @@ class App extends Component {
             if (this.state.data) {
               window.location.replace("/login");
             } else {
-              alert("ERROR ACCURED");
+              alert("ERROR OCCURRED");
             }
           }
         )
       );
   };
 
-  editUser = id => {
-    // fetch it boi
+  editUser = (e, currentUser) => {
+    alert("current user: " + JSON.stringify(currentUser))
+    this.setState({
+      _id: currentUser._id,
+      username: currentUser.username,
+      dob: currentUser.dob,
+      role: currentUser.role,
+      specialty: currentUser.specialty
+    }, () => {
+      alert(JSON.stringify(this.state));
+      e.preventDefault();
+      fetch("https://comptagroup.com/api/updateprofile", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(this.state)
+      })
+        .then(res => res.json())
+        .then(data =>
+          this.setState(
+            {
+              data
+            },
+            () => {
+              if (this.state.data) {
+                alert(JSON.stringify(this.state.data));
+                window.location.replace("/");
+              } else {
+                alert("ERROR OCCURRED");
+              }
+            }
+          )
+        );
+    });
   }
 
   deleteUser = id => {
@@ -255,6 +288,7 @@ class App extends Component {
                 localStorage.token ? (
                   <EditAccountInfo
                     state={this.state}
+                    setDefaultInfo={this.setDefaultInfo}
                     editUser={this.editUser}
                     loggedinUser={localStorage.loggedInUser || null}
                     _id={localStorage.loginId}
