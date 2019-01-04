@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://71.65.239.221:5000/api/users")
+    fetch("https://comptagroup.com/api/users")
       .then(res => res.json())
       .then(profiles => this.setState({ profiles }));
 
@@ -48,7 +48,7 @@ class App extends Component {
 
   addNewUser = e => {
     e.preventDefault();
-    fetch("http://71.65.239.221:5000/api/users/register", {
+    fetch("https://comptagroup.com/api/users/register", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -74,7 +74,7 @@ class App extends Component {
   };
 
   deleteUser = id => {
-    fetch(`http://71.65.239.221:5000/api/users/${id}`, {
+    fetch(`https://comptagroup.com/api/users/${id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -87,7 +87,7 @@ class App extends Component {
 
   logInUser = e => {
     e.preventDefault();
-    fetch("http://71.65.239.221:5000/api/users/login", {
+    fetch("https://comptagroup.com/api/users/login", {
       method: "POST",
       headers: {
         Accept: "application/json",
