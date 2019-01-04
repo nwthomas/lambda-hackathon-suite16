@@ -159,26 +159,32 @@ class App extends Component {
 
   updateSearchableProfiles = target => {
     if (!this.state.searchableProfiles.length && !this.state.hasSetRole) {
-      const profileArr = this.state.profiles.filter(profile => profile.role !== target);
-      this.setState({searchableProfiles: profileArr, loggedInRole: target, hasSetRole: true});
+      const profileArr = this.state.profiles.filter(
+        profile => profile.role !== target
+      );
+      this.setState({
+        searchableProfiles: profileArr,
+        loggedInRole: target,
+        hasSetRole: true
+      });
     } else if (this.state.hasSetRole) {
       if (!target.length) {
-        const profileArr = this.state.profiles.filter(profile => profile.role !== this.state.loggedInRole);
-        this.setState({searchableProfiles: profileArr});
+        const profileArr = this.state.profiles.filter(
+          profile => profile.role !== this.state.loggedInRole
+        );
+        this.setState({ searchableProfiles: profileArr });
       } else {
         const fuse = new Fuse(this.state.profiles, {
           shouldSort: true,
           threshold: 0.1,
           location: 0,
           minMatchCharLength: 1,
-          keys: [
-            "firstname",
-            "lastname",
-            "username"
-          ]
+          keys: ["firstname", "lastname", "username"]
         });
-        const profileArr = fuse.search(target).filter(profile => profile.role !== this.state.loggedInRole);
-        this.setState({searchableProfiles : profileArr});
+        const profileArr = fuse
+          .search(target)
+          .filter(profile => profile.role !== this.state.loggedInRole);
+        this.setState({ searchableProfiles: profileArr });
       }
     }
   };
