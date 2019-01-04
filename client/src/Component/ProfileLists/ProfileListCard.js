@@ -15,7 +15,9 @@ const ProfileListCard = props => {
 
           {props.role !== "advisee" ? (
             <div className="dashboard__rating">
-              <p className="dashboard__rating__num">Rating: {props.rating}</p>
+              <p className="dashboard__rating__num">
+                Rating: {Math.round(props.rating * 100) / 100}
+              </p>
             </div>
           ) : null}
           {props.role !== "advisee" ? (
