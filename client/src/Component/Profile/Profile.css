@@ -18,28 +18,7 @@
 .profile__heading {
   font-size: 3.2rem;
   font-weight: bold;
-}
-
-.profile__search {
-  display: flex;
-  justify-content: flex-end;  
-  align-items: center;
-  width: 50%;
-}
-
-.profile__search__label {
-  justify-self: end;
-  font-size: 2rem;
-  margin-right: 5%;
-}
-
-.profile__search__input {
-  width: 50%;
-  height: 50px;
-  font-family: FontAwesome;
-  font-size: 1.8rem;
-  padding: 5px 2%;
-  border-radius: 10px;
+  margin-bottom: 50px;
 }
 
 .profile__data {

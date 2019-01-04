@@ -1,4 +1,27 @@
 @import url("../../Styles/Variables.css");
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.profile-lists__search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto 37.5px;
+}
+
+.profile-lists__search__label {
+  font-size: 2.4rem;
+  margin-right: 2%;
+}
+
+.profile-lists__search__input {
+  width: 35%;
+  height: 50px;
+  font-family: "FontAwesome";
+  font-size: 2rem;
+  padding: 0 1% 0 2%;
+  border-radius: 10px;
+}
 
 .profile-lists__container {
   height: 630px;

@@ -36,17 +36,7 @@ const Profile = props => {
     ""
   ) : (
     <div className="profile-container">
-      <div className="profile-top">
-        <h2 className="profile__heading">Profile</h2>
-        <div className="profile__search">
-          <span className="profile__search__label">{target.role === "advisee" ? "Search advisors:" : "Search advisees:"}</span>
-          <input
-            className="profile__search__input"
-            type="search"
-            placeholder="&#61442;"
-          />
-        </div>
-      </div>
+      <h2 className="profile__heading">Profile</h2>
       <div className="profile__data">
         <div className="profile__data__left">
           <div className="profile__data__left__avatar">
