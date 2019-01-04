@@ -36,7 +36,7 @@ const LoginRegistration = props => {
 
       <NavLink
         className={localStorage.token ? "navlink" : "navlink--hidden"}
-        to="/"
+        to="/records"
       >
         <button
           className={
@@ -45,7 +45,7 @@ const LoginRegistration = props => {
               : "navbar__button--hidden"
           }
         >
-          Chat
+          Records
         </button>
       </NavLink>
       <NavLink
