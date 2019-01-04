@@ -10,7 +10,7 @@ const Rating = props => {
           id="5-stars"
           name="rating"
           value="5"
-          onClick={() => props.stars(5, props._id)}
+          onClick={e => props.stars(e, props._id)}
         />
         <label htmlFor="5-stars" className="star">
           &#9733;
@@ -20,7 +20,10 @@ const Rating = props => {
           id="4-stars"
           name="rating"
           value="4"
-          onClick={() => props.stars(4, props._id)}
+          onClick={e => {
+            console.log(props._id);
+            props.stars(e, props._id);
+          }}
         />
         <label htmlFor="4-stars" className="star">
           &#9733;
@@ -30,7 +33,7 @@ const Rating = props => {
           id="3-stars"
           name="rating"
           value="3"
-          onClick={() => props.stars(3, props._id)}
+          onClick={e => props.stars(e, props._id)}
         />
         <label htmlFor="3-stars" className="star">
           &#9733;
@@ -40,7 +43,7 @@ const Rating = props => {
           id="2-stars"
           name="rating"
           value="2"
-          onClick={() => props.stars(2, props._id)}
+          onClick={e => props.stars(e, props._id)}
         />
         <label htmlFor="2-stars" className="star">
           &#9733;
@@ -50,7 +53,7 @@ const Rating = props => {
           id="1-star"
           name="rating"
           value="1"
-          onClick={() => props.stars(1, props._id)}
+          onClick={e => props.stars(e, props._id)}
         />
         <label htmlFor="1-star" className="star">
           &#9733;

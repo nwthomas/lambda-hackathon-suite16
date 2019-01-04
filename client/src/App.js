@@ -50,8 +50,9 @@ class App extends Component {
     }
   }
 
-  stars = (rating, id) => {
-    fetch(`https://comptagroup.com/api/rating/${id}/${rating}`, {
+  stars = (e, id) => {
+    
+    fetch(`https://comptagroup.com/api/rating/${id}/${e.target.value}`, {
       method: "POST",
       headers: {
         Accept: "application/json",

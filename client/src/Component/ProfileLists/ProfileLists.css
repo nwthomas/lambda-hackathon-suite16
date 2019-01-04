@@ -57,6 +57,9 @@
   -moz-border-top-left-radius: 15px;
   -webkit-border-top-right-radius: 15px;
   -webkit-border-top-left-radius: 15px;
+  z-index: -1;
+  max-height: 349px;
+  height: 100%;
 }
 
 .dashboard__name__rating {
