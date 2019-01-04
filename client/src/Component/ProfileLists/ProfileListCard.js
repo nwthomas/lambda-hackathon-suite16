@@ -3,7 +3,7 @@ import "./ProfileLists.css";
 import Rating from "../Rating/Rating";
 
 const ProfileListCard = props => {
-  console.log(props._id)
+  console.log(props._id);
   return (
     <div className="dashboard__profile__container">
       <div className="">

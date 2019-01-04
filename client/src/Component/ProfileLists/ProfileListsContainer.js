@@ -12,7 +12,6 @@ const ProfileListsContainer = props => {
   console.log(displayProfilesArr);
 
   return (
-    
     <div className="profile-lists__container">
       {displayProfilesArr.map((card, index) => (
         <ProfileListCard
@@ -23,7 +22,6 @@ const ProfileListsContainer = props => {
           specialty={card.specialty}
           rating={card.rating}
           _id={card._id}
-
           stars={props.stars}
         />
       ))}
