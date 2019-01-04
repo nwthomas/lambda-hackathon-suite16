@@ -1,0 +1,120 @@
+/*--- Import --- */
+@import url("../../Styles/Variables.css");
+
+.user-edit__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 125px 0;
+}
+
+.user-edit__form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 780px;
+    box-shadow: 1px 1px 2px 2px var(--silver);
+    padding: 37.5px 7.5%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.user-edit__form__heading {
+    text-align: center;
+    font-family: var(--headers);
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.user-edit__form__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.user-edit__form__field--hidden {
+    display: none;
+}
+
+.user-edit__form__field__label {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.user-edit__form__field__text {
+    padding: 12.5px;
+}
+
+.user-edit__form__button {
+    width: 50%;
+    background-color: var(--user-edit-btn-bg);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--user-edit-btn-color);
+    cursor: pointer;
+    padding: 20px 0;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+.user-edit__form__button:hover {
+    background-color: var(--user-edit-btn-bg-hover);
+    color: var(--user-edit-btn-color-hover);
+    border: 2px solid var(--user-edit-btn-border-hover);
+    transition-duration: 250ms;
+    transition-property: all;
+}
+
+@media (max-width: 800px) {
+    .user-edit__form {
+        width: 450px;
+        padding: 37.5px 5%;
+    }
+
+    .user-edit__form__heading {
+        font-size: 2.6rem;
+    }
+
+    .user-edit__form__button {
+        width: 70%;
+        font-size: 1.7rem;
+        padding: 15px 0;
+        margin: 20px auto 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .user-edit__form {
+        width: 300px;
+        padding: 37.5px 7.5%;
+    }
+
+    .user-edit__form__heading {
+        font-size: 2.2rem;
+        line-height: 3.6rem;
+    }
+
+    .user-edit__form__field__label {
+        text-align: left;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .user-edit__form__field__text {
+        padding: 7.5px;
+    }
+
+    .user-edit__form__button {
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 15px 0;
+        margin: 30px 0 10px;
+    }
+
+    .user-edit__form__user-edit{
+        font-size: 1.3rem;
+    }
+}

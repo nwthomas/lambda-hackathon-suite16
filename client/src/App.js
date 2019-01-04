@@ -8,6 +8,7 @@ import Login from "./Component/Login/Login";
 import Register from "./Component/Registration/Register";
 import Dashboard from "./Component/Dashboard/Dashboard";
 import Footer from "./Component/Footer/Footer";
+import EditAccountInfo from "./Component/EditAccountInfo/EditAccountInfo";
 import Records from "./Component/Records/Records";
 
 class App extends Component {
@@ -88,6 +89,10 @@ class App extends Component {
         )
       );
   };
+
+  editUser = id => {
+    // fetch it boi
+  }
 
   deleteUser = id => {
     fetch(`https://comptagroup.com/api/users/${id}`, {
@@ -235,6 +240,29 @@ class App extends Component {
                   handleChange={this.handleChange}
                   selectedRole={this.state.role}
                 />
+              )}
+            />
+            <Route
+              path="/edit"
+              render={props => (
+                localStorage.token ? (
+                  <EditAccountInfo
+                    state={this.state}
+                    editUser={this.editUser}
+                    loggedinUser={localStorage.loggedInUser || null}
+                    _id={localStorage.loginId}
+                    profiles={this.state.profiles}
+                    handleChange={this.handleChange}
+                    hasSetRole={this.state.hasSetRole}
+                  />
+                ) : (
+                  <Login
+                    {...props}
+                    state={this.state}
+                    handleChange={this.handleChange}
+                    logInUser={this.logInUser}
+                  />
+                )
               )}
             />
             <Route path="/records" component={Records} />

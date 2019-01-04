@@ -1,5 +1,6 @@
 import React from "react";
 import "./Profile.css";
+import { NavLink } from "react-router-dom";
 
 const Profile = props => {
   const target = props.profiles.filter(profile => profile._id === props._id)[0];
@@ -37,6 +38,12 @@ const Profile = props => {
   ) : (
     <div className="profile-container">
       <h2 className="profile__heading">Profile</h2>
+      <NavLink
+        className="profile__edit-link"
+        to="/edit"
+      >
+        Edit Account Info
+      </NavLink>
       <div className="profile__data">
         <div className="profile__data__left">
           <div className="profile__data__left__avatar">
